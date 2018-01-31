@@ -8,10 +8,8 @@ export default ({ user, requestLogout }) => {
     </section>
   ) : (
     <section>
-      <button className="nav-btn" to="/signup">Sign Up</button>
-      <button
-        className="nav-btn"
-        to="/login">Sign In</button>
+      <Link className="nav-btn" to="/signup">Sign Up</Link>
+      <Link className="nav-btn" to="/login">Sign In</Link>
     </section>
   );
 

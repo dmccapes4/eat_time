@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "webpack -w",
-    "postinstall": "start"
+    "postinstall": "webpack"
   },
   "engines": {
     "npm": "3.10.10",
