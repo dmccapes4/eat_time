@@ -21,6 +21,11 @@
     "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
-    "start": "webpack -w"
+    "start": "webpack -w",
+    "postinstall": "start"
+  },
+  "engines": {
+    "npm": "3.10.10",
+    "node": "v6.10.1"
   }
 }
