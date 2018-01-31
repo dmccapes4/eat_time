@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 export default ({ user, requestLogout }) => {
   const display = user ? (
@@ -8,8 +9,8 @@ export default ({ user, requestLogout }) => {
     </section>
   ) : (
     <section>
-      <Link className="nav-btn" to="/signup">Sign Up</Link>
-      <Link className="nav-btn" to="/login">Sign In</Link>
+      <button className="nav-signup-btn">Sign Up</button>
+      <button className="nav-login-btn">Sign In</button>
     </section>
   );
 
