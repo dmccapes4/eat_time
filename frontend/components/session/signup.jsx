@@ -11,10 +11,14 @@ class Signup extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.requestClearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props);
-    this.props.requestSignup(this.state);
+    this.props.requestSignup(this.state)
+    .then(() => this.props.closeSignupModal());
   }
 
   handleInput(type) {
@@ -23,36 +27,59 @@ class Signup extends React.Component {
     };
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render () {
     return (
-      <section className="signup">
+      <section className="session">
         <form>
-          <label>Username:
+          {this.renderErrors()}
+          <br />
+          <div className="input-fields">
+            <label>Username:</label>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
               />
-          </label>
+          </div>
           <br />
-          <label>Email:
+          <div className="input-fields">
+            <label>Email:</label>
             <input
               type="text"
               value={this.state.email}
               onChange={this.handleInput('email')}
               />
-          </label>
+          </div>
             <br />
-          <label>Password:
+          <div className="input-fields">
+            <label>Password:</label>
             <input
               type="text"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />
-          </label>
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          </div>
+          <br />
+          <div className="session-btn-div">
+            <button
+              className="session-btn"
+              onClick={this.handleSubmit}>
+              Sign Up
+            </button>
+          </div>
         </form>
-        <br />
       </section>
     );
   }

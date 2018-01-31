@@ -66,3 +66,48 @@ button:focus {outline:0;}
    margin-right: 10px;
  }
 }
+
+.session {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: white;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+  width: 220px;
+  border: none;
+  outline: none;
+}
+
+.input-fields {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.session-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.session-btn {
+  background: #237b98;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 60px;
+  height: 30px;
+}
+
+.session-btn:hover {
+  background: #1c627a;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}

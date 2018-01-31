@@ -11,10 +11,14 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.requestClearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props);
-    this.props.requestLogin(this.state);
+    this.props.requestLogin(this.state)
+    .then(() => this.props.closeLoginModal());
   }
 
   handleInput(type) {
@@ -23,27 +27,49 @@ class Login extends React.Component {
     };
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render () {
     return (
-      <section className="login">
+      <section className="session">
         <form>
-          <label>Username:
+          {this.renderErrors()}
+          <br />
+          <div className="input-fields">
+            <label>Username:</label>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
               />
-          </label>
+          </div>
           <br />
-          <label>Password:
+          <div className="input-fields">
+            <label>Password:</label>
             <input
               type="text"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />
-          </label>
+          </div>
           <br />
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <div className="session-btn-div">
+            <button
+              className="session-btn"
+              onClick={this.handleSubmit}>
+              Sign In
+            </button>
+          </div>
         </form>
       </section>
     );
