@@ -1,22 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NavBar from './nav_bar';
+import Splash from './splash';
+import { withRouter } from 'react-router-dom';
 import {
-  requestLogout,
+  requestLogin,
   requestClearErrors
-} from '../../actions/session_actions';
+ } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  user: state.session.user,
-  errors: state.errors
+  state
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestLogout: () => dispatch(requestLogout()),
+  requestLogin: user => dispatch(requestLogin(user)),
   requestClearErrors: () => dispatch(requestClearErrors()),
 });
 
-export default connect (
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavBar);
+)(Splash));

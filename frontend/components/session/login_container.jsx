@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Login from './login';
 import {
   requestLogin,
@@ -17,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
   requestClearErrors: () => dispatch(requestClearErrors()),
 });
 
-export default connect (
+export default withRouter(connect (
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(Login));

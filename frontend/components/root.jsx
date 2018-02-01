@@ -1,12 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './app';
+import PageTransition from 'react-router-page-transition';
 
 export default ({ store }) => (
   <Provider store={store}>
-    <HashRouter>
+    <Router>
       <App />
-    </HashRouter>
+    </Router>
   </Provider>
 );

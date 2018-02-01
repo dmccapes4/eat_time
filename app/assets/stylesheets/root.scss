@@ -5,7 +5,112 @@ html {
   margin: 0px;
 }
 
-button:focus {outline:0;}
+h1 {
+  margin: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517440739/restaurant-laughing_surztv.jpg");
+  max-width: 1200px;
+  min-width: 800px;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  font-family: "Rammetto One";
+  color: white;
+
+  .splash-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    width: 100%;
+    height: 200px;
+
+    .splash-logo-box {
+      width: 33%;
+
+      .splash-logo {
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+        margin-left: 25px;
+      }
+    }
+
+    .splash-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      width: 33%;
+    }
+
+    .splash-top-right {
+      width: 33%;
+    }
+  }
+
+  .splash-content {
+    display: flex;
+
+    .splash-content-left {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      border-radius: 15px;
+      margin: 10px;
+
+      .splash-content-description {
+        margin: 20px;
+        width: 90%;
+      }
+    }
+
+    .splash-content-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+
+      .splash-section-btns {
+        border-radius: 10px;
+        background-color:rgba(255,255,255,0.5);
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .splash-btn {
+          background: #237b98;
+          color: white;
+          border: none;
+          border-radius: 3px;
+          width: 100px;
+          height: 30px;
+          margin: 20px;
+        }
+
+        .splash-btn:hover {
+          background: #1c627a;
+          cursor: pointer;
+          transition: background 0.5s ease;
+        }
+      }
+    }
+  }
+}
+
 
 .nav-bar {
  display: flex;

@@ -18,7 +18,10 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.requestLogin(this.state)
-    .then(() => this.props.closeLoginModal());
+    .then(() => {
+      this.props.history.push("/home");
+      this.props.closeLoginModal();
+    });
   }
 
   handleInput(type) {

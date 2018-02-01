@@ -37,7 +37,6 @@ class NavBar extends React.Component {
   }
 
   closeSignupModal() {
-    console.log('here');
     this.props.requestClearErrors();
     this.setState({ openSignup: false });
   }
