@@ -66,7 +66,7 @@ class Splash extends React.Component {
         <section className="splash-content">
           <section className="splash-content-left">
             <section className="splash-content-desctiption">
-              <h2>Automated Checkin!</h2>
+              <h2>Automated Restaurant Checkin!</h2>
               <p>
                 Are you tired of waiting in line
                 to check in for your reservations?

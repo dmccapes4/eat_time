@@ -1,7 +1,7 @@
 import {
   RECEIVE_ERRORS,
   RECEIVE_CLEAR_ERRORS,
-  RECEIVE_LOGIN
+  RECEIVE_LOGIN,
 } from '../actions/session_actions';
 
 export default (state = [], action) => {

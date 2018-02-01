@@ -81,17 +81,13 @@ class NavBar extends React.Component {
           isOpen={this.state.openLogin}
           onRequestClose={this.closeLoginModal}
           ariaHideApp={false}
-          className={{base: "modal",
-                      afterOpen: "modal",
-                      beforeClose: "modal"}}>
+          className={{base: "modal"}}>
           <LoginContainer closeLoginModal={this.closeLoginModal} />
         </Modal>
         <Modal isOpen={this.state.openSignup}
           onRequestClose={this.closeSignupModal}
           ariaHideApp={false}
-          className={{base: "modal",
-                      afterOpen: "modal",
-                      beforeClose: "modal"}}>
+          className={{base: "modal"}}>
           <SignupContainer closeSignupModal={this.closeSignupModal} />
         </Modal>
       </section>

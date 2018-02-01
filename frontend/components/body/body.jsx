@@ -1,15 +1,14 @@
 import React from 'react';
 import SplashContainer from '../splash/splash_container';
 import NavBarContainer from '../nav_bar/nav_bar_container';
-import BodyContainer from '../body/body_container';
+import RestaurantContainer from '../restaurants/restaurant_index_container';
 import RestaurantIndexContainer
   from '../restaurants/restaurant_index_container';
 
-class Main extends React.Component {
+class Body extends React.Component {
   render() {
     return(
-      <section className="main">
-        <SplashContainer />
+      <section className="body">
         <NavBarContainer />
         <RestaurantIndexContainer />
       </section>
@@ -17,4 +16,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Body;

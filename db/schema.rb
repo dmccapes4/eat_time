@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180131193003) do
     t.string "cuisine"
     t.integer "max_capacity"
     t.integer "time"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
