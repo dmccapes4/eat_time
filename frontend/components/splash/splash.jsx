@@ -40,7 +40,6 @@ class Splash extends React.Component {
   }
 
   demoLogin() {
-    console.log(this.props);
     this.props.requestLogin({username: '_', email: '_', password: '______'});
     this.props.history.push("/home");
   }

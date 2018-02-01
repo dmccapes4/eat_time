@@ -46,7 +46,9 @@ class Login extends React.Component {
     return (
       <section className="session">
         <form>
-          {this.renderErrors()}
+          <section className="errors">
+            {this.renderErrors()}
+          </section>
           <br />
           <div className="input-fields">
             <label>Username:</label>

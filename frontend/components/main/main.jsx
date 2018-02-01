@@ -2,6 +2,7 @@ import React from 'react';
 import SplashContainer from '../splash/splash_container';
 import NavBarContainer from '../nav_bar/nav_bar_container';
 import BodyContainer from '../body/body_container';
+import SearchFormContainer from '../search/search_form_container';
 import RestaurantIndexContainer
   from '../restaurants/restaurant_index_container';
 
@@ -11,6 +12,7 @@ class Main extends React.Component {
       <section className="main">
         <SplashContainer />
         <NavBarContainer />
+        <SearchFormContainer />
         <RestaurantIndexContainer />
       </section>
     );
