@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Main from './main';
+import Footer from './footer';
 
 export default connect (
   null,
   null
-)(Main);
+)(Footer);
