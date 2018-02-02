@@ -212,7 +212,6 @@ ul {
   width: 220px;
   border: none;
   outline: none;
-
 }
 
 .ReactModal__Body--open {
@@ -333,10 +332,13 @@ ul {
       width: 300px;
     }
 
-    .city-input input {
+    .city-input select {
       height: 45px;
       width: 300px;
       border: none;
+      color: #666;
+      margin-left: 10px;
+      font-size: 15px;
     }
 
     .search-btn {

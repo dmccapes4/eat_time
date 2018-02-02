@@ -9,6 +9,7 @@ class SearchForm extends React.Component {
   }
 
   handleInput(e) {
+    console.log('input');
     this.setState({
       search: Object.assign(
         {},
@@ -20,7 +21,14 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
+    let dropDown = document.getElementById("cities");
+    this.setState({
+      search: Object.assign(
+        {},
+        this.state.search,
+        { city: dropDown.value }
+      )
+    });
     this.props.requestSearchRestaurants(this.state);
   }
 
@@ -41,10 +49,15 @@ class SearchForm extends React.Component {
             <img src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png"/>
           </section>
           <section className="city-input search-btn">
-            <input
-              type="text"
-              onChange={this.handleInput}
-              />
+              <select
+                id="cities"
+                onChange={this.handleInput}
+                value={this.state.search.city}>
+                <option value="select">Select a City</option>
+                <option value="Sacramento">Sacramento</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Santa Barbara">Santa Barbara</option>
+              </select>
           </section>
           <button
             className="search-form-btn reservation-btn"
