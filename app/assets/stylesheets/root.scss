@@ -185,6 +185,16 @@ ul {
  }
 }
 
+.body-img {
+  background: url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517531133/table-view_qgsz82.jpg");
+  max-width: 1200px;
+  min-width: 800px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .session {
   display: flex;
   justify-content: space-between;
@@ -231,6 +241,7 @@ ul {
   border-radius: 3px;
   width: 60px;
   height: 30px;
+  margin-right: 10px;
 }
 
 .session-btn:hover {

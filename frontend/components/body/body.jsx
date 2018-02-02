@@ -4,6 +4,7 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import RestaurantContainer from '../restaurants/restaurant_index_container';
 import SearchFormContainer from '../search/search_form_container';
 import FooterContainer from '../footer/footer_container';
+import BodyImage from '../body_image';
 import RestaurantIndexContainer
   from '../restaurants/restaurant_index_container';
 
@@ -12,6 +13,7 @@ class Body extends React.Component {
     return(
       <section className="body">
         <NavBarContainer />
+        <BodyImage />
         <SearchFormContainer />
         <RestaurantIndexContainer />
         <FooterContainer />
