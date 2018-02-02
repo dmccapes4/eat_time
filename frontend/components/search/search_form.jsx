@@ -3,16 +3,25 @@ import React from 'react';
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { search: { city: ''} };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput() {
-
+  handleInput(e) {
+    this.setState({
+      search: Object.assign(
+        {},
+        this.state.search,
+        { city: e.target.value }
+      )
+    });
   }
 
-  handleSubmit() {
-
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(this.state);
+    this.props.requestSearchRestaurants(this.state);
   }
 
   render() {

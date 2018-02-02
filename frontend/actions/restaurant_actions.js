@@ -6,7 +6,7 @@ import {
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 
-const receiveRestaurants = restaurants => ({
+export const receiveRestaurants = restaurants => ({
   type: RECEIVE_RESTAURANTS,
   restaurants,
 });

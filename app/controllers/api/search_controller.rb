@@ -1,14 +1,10 @@
 class Api::SearchController < ApplicationController
   def index
     search_restaurants = []
-    @restaurants = Restaurant.all
-    city = search_params(:city)
+    city = search_params[:city]
+    @restaurants = Restaurant.where(city: city)
 
-    @restaurants.each do |restaurant|
-      search_restaurants << restaurant if city == restaurant.city
-    end
-
-    @restaurants = search_restaurants
+    @restaurants
     render :index
   end
 

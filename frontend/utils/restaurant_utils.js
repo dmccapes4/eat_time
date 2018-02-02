@@ -6,7 +6,7 @@ export const fetchRestaurants = () => {
 
 export const fetchRestaurant = id => {
   return $.ajax({
-    url: 'api/restaurants/',
+    url: 'api/restaurants',
     data: { id },
   });
 };
