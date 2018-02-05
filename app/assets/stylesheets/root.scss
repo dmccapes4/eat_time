@@ -1,22 +1,24 @@
 // Place all the styles related to the Root controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$lightgray: #f0f0f0;
 
 .splash {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517601086/restaurant-laughing_ohe8j8.jpg");
-  max-width: 1200px;
-  min-width: 800px;
-  height: 650px;
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  font-family: "Rammetto One";
   color: white;
   line-height: 1;
 
+  h1, h2, h3 {
+    font-family: "Rammetto One";
+  }
   .splash-top {
     display: flex;
     justify-content: space-between;
@@ -124,8 +126,11 @@
  height: 50px;
  background: white;
  border-bottom: 1px solid lightgray;
- font-family: "Rammetto One";
  padding-top: 0px;
+
+ h2 {
+   font-family: "Rammetto One";
+ }
 
  .logout-welcome {
    display: flex;
@@ -135,6 +140,10 @@
   p {
     margin-right: 10px;
   }
+ }
+
+ .session-btns {
+   font-size: 15px;
  }
 
  .nav-btn {
@@ -150,8 +159,9 @@
    color: white;
    border: none;
    border-radius: 3px;
-   width: 60px;
+   width: 100px;
    height: 30px;
+   font-size: 15px;
  }
 
  .nav-signup-btn:hover {
@@ -162,10 +172,11 @@
 
  .nav-login-btn {
    margin-right: 10px;
-   width: 60px;
+   width: 100px;
    height: 30px;
    background: white;
    border: none;
+   font-size: 15px;
  }
 
  .nav-login-btn:hover {
@@ -192,9 +203,8 @@
 }
 
 .body-img {
-  background: url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517531133/table-view_qgsz82.jpg");
-  max-width: 1200px;
-  min-width: 800px;
+  background: url("salmon_salad.jpg");
+  width: 100vw;
   height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -272,26 +282,31 @@
 
 .restaurant-container {
   display: flex;
+  margin: 30px;
 }
 
 .restaurant-list {
+  flex: 1;
   margin-top: 10px;
-  width: 270px;
-  height: 320px;
-  border: 1px solid lightgray;
+  height: 500px;
   border-radius: 5px;
   overflow-y: scroll;
+  padding-right: 15px;
 
   .restaurant-content {
+    padding: 10px;
     display: flex;
     align-items: center;
     margin: 10px;
     height: 50px;
-    width: 250px;
     border: 1px solid gray;
     border-radius: 5px;
     overflow: hidden;
     opacity: 0.8;
+
+    p {
+      font-size: 15px;
+    }
 
     .restaurant-img {
       width: 50px;
@@ -305,18 +320,18 @@
       font-family: sans-serif;
 
       .restaurant-name {
-        font-size: 12px;
+        font-size: 15px;
         font-weight: 600;
         color: #237B98;
         margin-bottom: 10px;
       }
 
       .restaurant-city {
-        font-size: 10px;
+        font-size: 12px;
       }
 
       .restaurant-cuisine {
-        font-size: 10px;
+        font-size: 12px;
       }
     }
   }
@@ -330,7 +345,7 @@
 
 .search-form-container {
   padding: 10px;
-  background: lightgray;
+  background: $lightgray;
 
   .search-btn img {
     height: 10px;
@@ -366,7 +381,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: lightgray;
+    background: $lightgray;
     margin-bottom: 5px;
 
     .search-form {
@@ -413,6 +428,16 @@
       .city-input option {
         margin-left: 10px;
       }
+
+      .date-input-field {
+        height: 45px;
+        width: 300px;
+        border: none;
+        color: #666;
+        font-size: 15px;
+        background: white;
+        margin-left: 10px;
+      }
     }
   }
 
@@ -421,7 +446,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: lightgray;
+    background: $lightgray;
 
     .refine-search-form {
       display: flex;
@@ -451,6 +476,7 @@
 
     .restaurant-search {
       width: 300px;
+      border: none;
     }
 
     .restaurant-search input {
@@ -468,6 +494,8 @@
 .reservation-btn {
   color: white;
   background: #DA3743;
+  width: 200px;
+  font-size: 15px;
 }
 
 .reservation-btn:hover {
@@ -480,9 +508,13 @@
 .restaurant-detail {
   margin-left: 15px;
   margin-top: 15px;
+  flex: 3;
+  border-radius: 10px;
+  height: 500px;
 
   .restaurant-detail-top {
     display: flex;
+    flex: 1;
 
     .restaurant-detail-img img {
       width: 200px;
@@ -506,18 +538,24 @@
   }
   .restaurant-detail-bottom {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
     height: 100px;
-    background: gray;
+
+    .reservation-btn {
+      height: 50px;
+      border-radius: 5px;
+    }
   }
 }
 
 .footer {
   width: 100%;
-  height: 100px;
-  background: gray;
+  height: 50px;
   margin-top: 10px;
+  background: black;
+  color: white;
 }

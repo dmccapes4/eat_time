@@ -28,7 +28,7 @@ class Api::SearchController < ApplicationController
 
   def search_params
     params.require(:search).permit(
-      :city, :cuisine, :restaurant
+      :city, :cuisine, :restaurant, :time
     )
   end
 end

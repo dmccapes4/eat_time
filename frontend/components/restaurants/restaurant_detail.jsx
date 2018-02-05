@@ -6,6 +6,7 @@ class RestaurantDetail extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log('here');
     if (this.props.match.params.restaurantId !== nextProps.match.params.restaurantId) {
       this.props.requestRestaurant(nextProps.match.params.restaurantId);
     }
@@ -18,8 +19,6 @@ class RestaurantDetail extends React.Component {
     if (!showRestaurant) showRestaurant = this.props.defaultRestaurant;
 
     if (!showRestaurant) return null;
-
-    console.log(this.props);
 
     return (
       <section className="restaurant-detail">
@@ -36,7 +35,7 @@ class RestaurantDetail extends React.Component {
           <section className="available-reservations">
             <ul>
               {
-
+                showRestaurant.reservation_times
               }
             </ul>
           </section>
@@ -45,7 +44,7 @@ class RestaurantDetail extends React.Component {
           <section className="restaurant-detail-reservation-description">
             <p>This is where the info about the reservation will go</p>
           </section>
-          <section className="restaurant-detail-reservation-button-holder">
+          <section className="restaurant-detail-reservation-btn-holder">
             <button
               className="reservation-btn"
               >Make Your Reservation!</button>

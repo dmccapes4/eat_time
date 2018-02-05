@@ -83,25 +83,13 @@ class SearchForm extends React.Component {
               </select>
               <img src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png"/>
             </section>
-            <section
-              className="date-input search-btn"
-              onClick={this.openCalendarModal}>
-              <Modal
-                isOpen={this.state.openCalendarModal}
-                onRequestClose={this.closeSignupModal}
-                ariaHideApp={false}
-                >
-                <Calendar
-                  id="date"
-                  onChange={this.handleInput}
-                  value={this.state.search.date}
-                  />
-                <button
-                  onClick={this.closeCalendarModal}
-                  value="Close"
-                  ></button>
-              </Modal>
-              <img src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png"/>
+            <section className="date-input search-btn">
+              <input
+                id="date"
+                className="date-input-field"
+                type="text"
+                onChange={this.handleInput}
+                placeholder="Date"/>
             </section>
             <section className="time-input search-btn">
               <select
@@ -157,7 +145,8 @@ class SearchForm extends React.Component {
                 id="restaurant"
                 className="restaurant-input"
                 type="text"
-                onChange={this.handleInput}/>
+                onChange={this.handleInput}
+                placeholder="Restaurant"/>
             </section>
           </form>
         </section>
