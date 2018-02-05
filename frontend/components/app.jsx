@@ -1,7 +1,7 @@
 import React from 'react';
-import MainContainer from './main/main_container';
+import SplashContainer from './splash/splash_container';
 import BodyContainer from './body/body_container';
-import { Route } from 'react-router-dom';
+import { Route, HashRouter } from 'react-router-dom';
 import { Switch } from 'react-router';
 import {
   AuthRoute,
@@ -11,8 +11,9 @@ import {
 export default () => (
   <section>
     <Switch>
+      <Route path="/restaurant/:restaurantId" component={BodyContainer} />
       <Route path="/home" component={BodyContainer} />
-      <Route path="/" component={MainContainer} />
+      <Route path="/" component={SplashContainer} />
     </Switch>
   </section>
 );

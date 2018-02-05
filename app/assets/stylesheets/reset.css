@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -47,9 +48,35 @@ table {
 	border-spacing: 0;
 }
 
+
+/* Dylan McCapes */
 select {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;       /* remove default arrow */
    background-image: url(...);   /* add custom arrow */
+}
+
+html {
+  margin: 0px;
+}
+
+h1 p {
+  margin: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+*:focus{
+    outline: none;
+}
+
+p {
+	color: black;
 }

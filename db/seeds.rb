@@ -9,7 +9,7 @@
 User.destroy_all
 Restaurant.destroy_all
 
-demo = User.create(username: '_', email: '_', password: '______')
+demo = User.create(username: 'Demo', email: '_', password: '______')
 user1 = User.create(username: 'Dylan', email: 'dylan@email.com', password: '111111')
 user2 = User.create(username: 'Jacqueline', email: 'jacqueline@email.com', password: '111111')
 user3 = User.create(username: 'Brandon', email: 'brandon@email.com', password: '111111')

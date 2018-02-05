@@ -17,6 +17,7 @@ class NavBar extends React.Component {
     this.closeLoginModal = this.closeLoginModal.bind(this);
     this.openSignupModal = this.openSignupModal.bind(this);
     this.closeSignupModal = this.closeSignupModal.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentWillMount() {
@@ -41,17 +42,28 @@ class NavBar extends React.Component {
     this.setState({ openSignup: false });
   }
 
+  demoLogin() {
+    this.props.requestLogin({username: 'Demo', email: '_', password: '______'});
+    this.props.history.push("/home");
+  }
+
   render() {
     const display = this.props.user ? (
-      <section>
+      <section className="logout-welcome">
+        <p>Welcome, {this.props.user.username}</p>
         <button
-          className="session-btn"
+          className="nav-signup-btn"
           onClick={this.props.requestLogout.bind(this)}>
           Log Out
         </button>
       </section>
     ) : (
-      <section>
+      <section className="session-btns">
+        <button
+          onClick={this.demoLogin.bind(this)}
+          className="nav-signup-btn demo-btn">
+          Demo
+        </button>
         <button
           onClick={this.openSignupModal.bind(this)}
           className="nav-signup-btn">
@@ -67,13 +79,15 @@ class NavBar extends React.Component {
 
      return (
       <section className="nav-bar">
-        <section className="nav-title">
-          <img
-            className="nav-logo"
-            src="http://res.cloudinary.com/mccapes-construction/image/upload/v1517354018/logo_eevkue.png"
-            />
-          <h2>EatTime</h2>
-        </section>
+        <Link to="/">
+          <section className="nav-title">
+            <img
+              className="nav-logo"
+              src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517768851/eattime_logo_okfz9e.png"
+              />
+            <h2>EatTime</h2>
+          </section>
+        </Link>
         <section className="nav-btns">
           {display}
         </section>

@@ -46,10 +46,10 @@ class Signup extends React.Component {
     return (
       <section className="session">
         <form>
+          <h2>Create an Account!</h2>
           <section className="errors">
             {this.renderErrors()}
           </section>
-          <br />
           <div className="input-fields">
             <label>Username:</label>
             <input
@@ -58,7 +58,6 @@ class Signup extends React.Component {
               onChange={this.handleInput('username')}
               />
           </div>
-          <br />
           <div className="input-fields">
             <label>Email:</label>
             <input
@@ -67,11 +66,10 @@ class Signup extends React.Component {
               onChange={this.handleInput('email')}
               />
           </div>
-            <br />
           <div className="input-fields">
             <label>Password:</label>
             <input
-              type="text"
+              type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />

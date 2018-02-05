@@ -1,27 +1,12 @@
 // Place all the styles related to the Root controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html {
-  margin: 0px;
-}
-
-h1 p {
-  margin: 0;
-}
-
-button:focus {
-  outline: 0;
-}
-
-ul {
-  list-style: none;
-}
 
 .splash {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517440739/restaurant-laughing_surztv.jpg");
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517601086/restaurant-laughing_ohe8j8.jpg");
   max-width: 1200px;
   min-width: 800px;
   height: 650px;
@@ -37,6 +22,7 @@ ul {
     justify-content: space-between;
     width: 100%;
     height: 200px;
+    margin-bottom: 50px;
 
     .splash-logo-box {
       width: 33%;
@@ -45,7 +31,7 @@ ul {
         width: 150px;
         height: 150px;
         margin-top: 10px;
-        margin-left: 25px;
+        margin-left: 55px;
       }
     }
 
@@ -57,6 +43,7 @@ ul {
       margin: 0;
       width: 33%;
       font-size: 40px;
+      line-height: 1.2;
     }
 
     .splash-top-right {
@@ -73,8 +60,11 @@ ul {
       width: 50%;
       border-radius: 15px;
       margin: 10px;
+      margin-left: 25px;
+      line-height: 1.2;
 
       .splash-content-description {
+        color: white;
         margin: 20px;
         width: 90%;
       }
@@ -83,7 +73,8 @@ ul {
         font-size: 24px;
       }
 
-      p {
+      h3 {
+        color: white;
         margin: 10px;
       }
     }
@@ -136,7 +127,21 @@ ul {
  font-family: "Rammetto One";
  padding-top: 0px;
 
+ .logout-welcome {
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+
+  p {
+    margin-right: 10px;
+  }
+ }
+
  .nav-btn {
+   margin-right: 10px;
+ }
+
+ .demo-btn {
    margin-right: 10px;
  }
 
@@ -175,6 +180,7 @@ ul {
    height: 50px;
    padding-right: 10px;
    border-right: 1px solid lightgray;
+   color: black;
  }
 
  .nav-logo {
@@ -199,10 +205,22 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 220px;
-  padding: 15px;
+  padding: 50px;
   border-radius: 5px;
   border: 1px solid gray;
   background: white;
+}
+
+.session h2 {
+  font-size: 20;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.session-btns {
+  display: flex;
+  align-items: center;
 }
 
 .modal {
@@ -212,6 +230,7 @@ ul {
   width: 220px;
   border: none;
   outline: none;
+  background-color: rgba(0, 0, 0, .75);
 }
 
 .ReactModal__Body--open {
@@ -226,6 +245,7 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 220px;
+  margin-top: 10px;
 }
 
 .session-btn-div {
@@ -241,6 +261,7 @@ ul {
   width: 60px;
   height: 30px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .session-btn:hover {
@@ -249,7 +270,11 @@ ul {
   transition: background 0.5s ease;
 }
 
-.restaurant-list ul {
+.restaurant-container {
+  display: flex;
+}
+
+.restaurant-list {
   margin-top: 10px;
   width: 270px;
   height: 320px;
@@ -277,7 +302,7 @@ ul {
 
     .restaurant-info {
       margin-left: 15px;
-      font-family: "Comic Sans MS";
+      font-family: sans-serif;
 
       .restaurant-name {
         font-size: 12px;
@@ -299,74 +324,143 @@ ul {
   .restaurant-content:hover {
     cursor: pointer;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
   }
 }
 
 .search-form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 75px;
+  padding: 10px;
   background: lightgray;
 
-  .search-form {
+  .search-btn img {
+    height: 10px;
+    weight: 10px;
+    margin-right: 10px;
+  }
+
+  .search-btn p {
+    margin-left: 10px;
+    color: #666;
+  }
+
+  .search-btn:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .search-btn {
     display: flex;
-    border-radius: 5px;
-    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-right: 1px solid lightgray;
+    background: white;
+    margin: 0px;
+    opacity: 0.7;
+    font-family: sans-serif;
+  }
 
-    .num-people-input {
-      width: 100px;
+  .search-form-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: lightgray;
+    margin-bottom: 5px;
+
+    .search-form {
+      display: flex;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .num-people-input {
+        width: 100px;
+      }
+
+      .date-input {
+        width: 200px;
+      }
+
+      .time-input {
+        width: 100px;
+      }
+
+      .time-input select {
+        height: 45px;
+        width: 100px;
+        border: none;
+        color: #666;
+        margin-left: 10px;
+        font-size: 15px;
+        background: white;
+      }
+
+      .city-input {
+        width: 300px;
+      }
+
+      .city-input select {
+        height: 45px;
+        width: 300px;
+        border: none;
+        color: #666;
+        margin-left: 10px;
+        font-size: 15px;
+        background: white;
+      }
+
+      .city-input option {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .search-form-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: lightgray;
+
+    .refine-search-form {
+      display: flex;
+      border-radius: 5px;
+      overflow: hidden;
     }
 
-    .date-input {
-      width: 200px;
-    }
-
-    .time-input {
-      width: 100px;
-    }
-
-    .city-input {
+    .cuisine-search {
       width: 300px;
+      height: 50px;
     }
 
-    .city-input select {
+    .cuisine-search select {
       height: 45px;
       width: 300px;
       border: none;
       color: #666;
-      margin-left: 10px;
       font-size: 15px;
-    }
-
-    .search-btn {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      border-right: 1px solid lightgray;
-      background: white;
-      margin: 0px;
-      opacity: 0.7;
-    }
-
-    .search-btn img {
-      height: 10px;
-      weight: 10px;
-      margin-right: 10px;
-    }
-
-    .search-btn p {
+      border-radius: 0px;
       margin-left: 10px;
-      color: #666;
+      background: white;
     }
 
-    .search-btn:hover {
-      cursor: pointer;
-      opacity: 1;
-      transition: opacity 0.5s ease;
+    .cuisine-search option {
+      margin-left: 10px;
+    }
+
+    .restaurant-search {
+      width: 300px;
+    }
+
+    .restaurant-search input {
+      height: 45px;
+      width: 300px;
+      border: none;
+      color: #666;
+      font-size: 15px;
+      margin-left: 10px;
+      background: white;
     }
   }
 }
@@ -381,6 +475,44 @@ ul {
   background: #b8222d;
   cursor: pointer;
   transition: background 0.5s ease;
+}
+
+.restaurant-detail {
+  margin-left: 15px;
+  margin-top: 15px;
+
+  .restaurant-detail-top {
+    display: flex;
+
+    .restaurant-detail-img img {
+      width: 200px;
+      height: 150px;
+      border-radius: 10px;
+    }
+
+    .restaurant-detail-info {
+      margin: 15px;
+
+      li {
+        margin: 10px;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #237B98;
+      }
+    }
+  }
+  .restaurant-detail-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 100px;
+    background: gray;
+  }
 }
 
 .footer {

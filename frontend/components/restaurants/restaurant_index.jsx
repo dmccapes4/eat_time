@@ -1,5 +1,7 @@
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_item';
+import RestaurantDetailContainer from './restaurant_detail_container';
+import { Route, HashRouter } from 'react-router-dom';
 
 class RestaurantIndex extends React.Component {
   constructor(props) {
@@ -13,8 +15,8 @@ class RestaurantIndex extends React.Component {
   render() {
     const { restaurants } = this.props;
     return (
-      <section className="restaurant-list">
-        <ul>
+      <section className="restaurant-container">
+        <ul className="restaurant-list">
           {
             restaurants.map(restaurant => (
               <RestaurantIndexItem
@@ -24,6 +26,7 @@ class RestaurantIndex extends React.Component {
             )
           }
         </ul>
+        <RestaurantDetailContainer defaultRestaurant={restaurants[0]} />
       </section>
     );
   }

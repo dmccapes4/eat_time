@@ -12,10 +12,6 @@ class Main extends React.Component {
     return(
       <section className="main">
         <SplashContainer />
-        <NavBarContainer />
-        <SearchFormContainer />
-        <RestaurantIndexContainer />
-        <FooterContainer />
       </section>
     );
   }

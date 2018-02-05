@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
+import style from '../modal_style';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class Splash extends React.Component {
   }
 
   demoLogin() {
-    this.props.requestLogin({username: '_', email: '_', password: '______'});
+    this.props.requestLogin({username: 'Demo', email: '_', password: '______'});
     this.props.history.push("/home");
   }
 
@@ -52,7 +53,7 @@ class Splash extends React.Component {
           <section className="splash-logo-box">
             <img
               className="splash-logo"
-              src="http://res.cloudinary.com/mccapes-construction/image/upload/v1517354018/logo_eevkue.png"
+              src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517768851/eattime_logo_okfz9e.png"
               />
           </section>
           <section className="splash-title">
@@ -66,19 +67,19 @@ class Splash extends React.Component {
           <section className="splash-content-left">
             <section className="splash-content-desctiption">
               <h2>Automated Restaurant Checkin!</h2>
-              <p>
+              <h3>
                 Are you tired of waiting in line
                 to check in for your reservations?
-              </p>
-              <p>
+              </h3>
+              <h3>
                 Do those loud buzzers startle you when
                 your table is ready?
-              </p>
-              <p>
+              </h3>
+              <h3>
                 Let EatTime handle checkin for you with
                 automatic location based checkin and a custom
                 ring tone to inform you that your table is ready!
-              </p>
+              </h3>
             </section>
           </section>
           <section className="splash-content-right">
@@ -105,9 +106,8 @@ class Splash extends React.Component {
           isOpen={this.state.openLogin}
           onRequestClose={this.closeLoginModal}
           ariaHideApp={false}
-          className={{base: "modal",
-                      afterOpen: "modal",
-                      beforeClose: "modal"}}>
+          className={{base: "modal" }}
+          style={style}>
           <LoginContainer
 
             closeLoginModal={this.closeLoginModal}
@@ -116,9 +116,7 @@ class Splash extends React.Component {
         <Modal isOpen={this.state.openSignup}
           onRequestClose={this.closeSignupModal}
           ariaHideApp={false}
-          className={{base: "modal",
-                      afterOpen: "modal",
-                      beforeClose: "modal"}}>
+          className={{base: "modal" }}>
           <SignupContainer
             closeSignupModal={this.closeSignupModal}
             />
