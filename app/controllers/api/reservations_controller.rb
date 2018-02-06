@@ -19,7 +19,7 @@ class Api::ReservationsController < ApplicationController
     if @reservation.save
       render :show
     else
-      render json: @reservation.errors.full_messages, status: 401
+      render json: @reservation.errors.full_messages, status: 422
     end
   end
 

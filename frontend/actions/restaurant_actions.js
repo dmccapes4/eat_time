@@ -23,5 +23,5 @@ export const requestRestaurants = () => dispatch => (
 
 export const requestRestaurant = id => dispatch => (
   fetchRestaurants(id)
-    .then(restaurants => dispatch(receiveRestaurants(restaurants)))
+    .then(restaurant => dispatch(receiveRestaurant(restaurant)))
 );

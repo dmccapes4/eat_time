@@ -189,6 +189,10 @@ $lightgray: #f0f0f0;
    transition: font-weight 0.3s;
  }
 
+ .view-profile-btn {
+   margin-right: 10px;
+ }
+
  .nav-title {
    display: flex;
    align-items: center;
@@ -282,6 +286,13 @@ $lightgray: #f0f0f0;
   background: #1c627a;
   cursor: pointer;
   transition: background 0.5s ease;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  background: $lightgray;
+  height: 125px;
 }
 
 .restaurant-container {
@@ -526,19 +537,35 @@ $lightgray: #f0f0f0;
       border-radius: 10px;
     }
 
-    .restaurant-detail-info {
-      margin: 15px;
+    .restaurant-reservation-info {
 
-      li {
-        margin: 10px;
+      .restaurant-detail-info {
+        margin: 15px;
+
+        li {
+          margin: 10px;
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #237B98;
+        }
       }
 
-      h3 {
-        font-size: 20px;
-        font-weight: 600;
-        color: #237B98;
+      .available-reservations {
+        display: flex;
+        margin: 10px;
+
+        button {
+          width: 50px;
+          margin: 5px;
+          border: none;
+          border-radius: 3px;
+        }
       }
     }
+
   }
   .restaurant-detail-bottom {
     display: flex;
@@ -550,6 +577,17 @@ $lightgray: #f0f0f0;
     height: 100px;
 
     .reservation-btn {
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .gray-reservation-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $lightgray;
+      width: 200px;
+      font-size: 15px;
       height: 50px;
       border-radius: 5px;
     }

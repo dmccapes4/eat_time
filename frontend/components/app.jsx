@@ -12,6 +12,7 @@ export default () => (
   <section>
     <Switch>
       <Route path="/restaurant/:restaurantId" component={BodyContainer} />
+      <ProtectedRoute path="/profile" component={BodyContainer} />
       <Route path="/home" component={BodyContainer} />
       <Route path="/" component={SplashContainer} />
     </Switch>

@@ -1,15 +1,22 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import RestaurantDetail from './restaurant_detail';
 import { requestRestaurant } from '../../actions/restaurant_actions';
-import { withRouter } from 'react-router-dom';
+import { requestCreateReservation } from '../../actions/reservation_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  const restaurant = state.entities.restaurants[ownProps.match.params.restaurantId];
-  return { restaurant };
+  let restaurant = state.entities.restaurants[ownProps.match.params.restaurantId];
+  if (!restaurant) restaurant = state.entities.restaurants[0];
+  return {
+    restaurant,
+    user: state.session.user,
+   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestRestaurant: id => dispatch(requestRestaurant(id))
+  requestRestaurant: id => dispatch(requestRestaurant(id)),
+  requestCreateReservation: reservation =>
+    dispatch(requestCreateReservation(reservation)),
 });
 
 export default withRouter(connect(

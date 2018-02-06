@@ -6,6 +6,9 @@ import { Route, HashRouter } from 'react-router-dom';
 class RestaurantIndex extends React.Component {
   constructor(props) {
     super(props);
+    let city;
+    let cuisine;
+    let name;
   }
 
   componentDidMount() {
@@ -18,12 +21,13 @@ class RestaurantIndex extends React.Component {
       <section className="restaurant-container">
         <ul className="restaurant-list">
           {
-            restaurants.map(restaurant => (
-              <RestaurantIndexItem
-              key={`${restaurant.id}`}
-              restaurant={restaurant}/>
-              )
-            )
+            restaurants.map(restaurant => {
+              if (restaurant.id) {
+                return <RestaurantIndexItem
+                key={`${restaurant.id}`}
+                restaurant={restaurant}/>;
+              }
+            })
           }
         </ul>
         <RestaurantDetailContainer defaultRestaurant={restaurants[0]} />

@@ -4,7 +4,9 @@ import {
   fetchCreateReservation,
   fetchUpdateReservation,
   fetchDeleteReservation,
-} from '../utils/reservation_util';
+} from '../utils/reservation_utils';
+
+import { receiveErrors } from './session_actions';
 
 export const RECEIVE_RESERVATION = 'RECEIVE_RESERVATION';
 export const RECEIVE_RESERVATIONS = 'RECEIVE_RESERVATIONS';
@@ -40,13 +42,15 @@ export const requestReservations = () => dispatch => (
 export const requestCreateReservation = reservation => dispatch => (
   fetchCreateReservation(reservation)
     .then((serverReservation) =>
-      dispatch(receiveReservation(serverReservation)))
+      dispatch(receiveReservation(serverReservation)),
+    errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const requestUpdateReservation = reservation => dispatch => (
   fetchUpdateReservation(reservation)
     .then((serverReservation) =>
-      dispatch(receiveReservation(serverReservation)))
+      dispatch(receiveReservation(serverReservation)),
+    errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const requestDeleteReservation = id => dispatch => (

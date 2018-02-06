@@ -14,16 +14,22 @@ class SearchForm extends React.Component {
         date: new Date(),
       },
       openCalendarModal: false,
-      reservation: {
-        time: '',
-        num_people: '',
-        date: new Date(),
-      }
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openCalendarModal = this.openCalendarModal.bind(this);
     this.closeCalendarModal = this.closeCalendarModal.bind(this);
+  }
+
+  componentDidMount() {
+    let date = new Date();
+    let month = date.getMonth() + 1;
+    month = month.length > 9 ? `${month}` : `0${month}`;
+    let day = date.getDate();
+    day = day > 9 ? `${day}` : `0${day}`;
+    date = `${date.getFullYear()}-${month}-${day}`;
+
+    document.getElementById('date').value = date;
   }
 
   openCalendarModal() {
@@ -49,9 +55,6 @@ class SearchForm extends React.Component {
     let city = document.getElementById("city");
     let restaurant = document.getElementById("restaurant");
     let cuisine = document.getElementById("cuisine");
-    let time = document.getElementById("time");
-    let num_people = document.getElementById("num_people");
-    let date = document.getElementById("date");
     this.setState({
       search: Object.assign(
         {},
@@ -60,17 +63,6 @@ class SearchForm extends React.Component {
           city: city.value,
           restaurant: restaurant.value,
           cuisine: cuisine.value,
-        }
-      )
-    });
-    this.setState({
-      reservation: Object.assign(
-        {},
-        this.state.reservation,
-        {
-          time: time.value,
-          num_people: num_people.value,
-          date: date.value
         }
       )
     });
@@ -102,8 +94,10 @@ class SearchForm extends React.Component {
                 id="date"
                 className="date-input-field"
                 type="date"
-                onChange={this.handleInput}
-                placeholder="Date"/>
+                onChange={(e) => {
+                  this.handleInput(e);
+                  this.forceUpdate();
+                }}/>
             </section>
             <section className="time-input search-btn">
               <select
