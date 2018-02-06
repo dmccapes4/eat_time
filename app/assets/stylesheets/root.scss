@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $lightgray: #f0f0f0;
 
+#root {
+  height: 100vh;
+}
+
 .splash {
   display: flex;
   flex-direction: column;
@@ -556,6 +560,6 @@ $lightgray: #f0f0f0;
   width: 100%;
   height: 50px;
   margin-top: 10px;
-  background: black;
+  background: #333;
   color: white;
 }

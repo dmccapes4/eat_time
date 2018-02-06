@@ -3,6 +3,7 @@ class Api::SearchController < ApplicationController
     city = search_params[:city]
     cuisine = search_params[:cuisine]
     name = search_params[:restaurant]
+    time = search_params[:time].to_i
     @restaurants = Restaurant.all.to_a
 
     unless city == ""

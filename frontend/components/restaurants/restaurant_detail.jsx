@@ -6,7 +6,6 @@ class RestaurantDetail extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('here');
     if (this.props.match.params.restaurantId !== nextProps.match.params.restaurantId) {
       this.props.requestRestaurant(nextProps.match.params.restaurantId);
     }
@@ -15,11 +14,18 @@ class RestaurantDetail extends React.Component {
   render() {
     const { restaurant } = this.props;
     let showRestaurant = restaurant;
-
     if (!showRestaurant) showRestaurant = this.props.defaultRestaurant;
-
     if (!showRestaurant) return null;
 
+    let time = document.getElementById('time').value;
+    let reservationTimes = [
+      `${time - 1}:00`,
+      `${time - 1}:30`,
+      `${time}:00`,
+      `${time}:30`,
+      `${time + 1}:00`,
+    ];
+    console.log(`reservation times: ${reservationTimes}`);
     return (
       <section className="restaurant-detail">
         <section className="restaurant-detail-top">
@@ -35,7 +41,11 @@ class RestaurantDetail extends React.Component {
           <section className="available-reservations">
             <ul>
               {
-                showRestaurant.reservation_times
+                reservationTimes.map(reservationTime => {
+                  <button className="reservation-btn">
+                    {`${reservationTime}`}
+                  </button>
+                })
               }
             </ul>
           </section>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :index]
     resource :session, only: [:create, :show, :destroy]
     resources :restaurants, only: [:show, :index]
-    resources :reservations, only: [:create, :show, :index]
+    resources :reservations, only: [:create, :show, :index, :update, :delete]
     resources :search, only: [:index]
   end
   root to: 'root#root'

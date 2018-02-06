@@ -14,6 +14,11 @@ class SearchForm extends React.Component {
         date: new Date(),
       },
       openCalendarModal: false,
+      reservation: {
+        time: '',
+        num_people: '',
+        date: new Date(),
+      }
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,7 +51,7 @@ class SearchForm extends React.Component {
     let cuisine = document.getElementById("cuisine");
     let time = document.getElementById("time");
     let num_people = document.getElementById("num_people");
-    // let date = document.getElementById("date");
+    let date = document.getElementById("date");
     this.setState({
       search: Object.assign(
         {},
@@ -55,8 +60,17 @@ class SearchForm extends React.Component {
           city: city.value,
           restaurant: restaurant.value,
           cuisine: cuisine.value,
+        }
+      )
+    });
+    this.setState({
+      reservation: Object.assign(
+        {},
+        this.state.reservation,
+        {
           time: time.value,
           num_people: num_people.value,
+          date: date.value
         }
       )
     });
@@ -87,7 +101,7 @@ class SearchForm extends React.Component {
               <input
                 id="date"
                 className="date-input-field"
-                type="text"
+                type="date"
                 onChange={this.handleInput}
                 placeholder="Date"/>
             </section>
@@ -96,15 +110,15 @@ class SearchForm extends React.Component {
                 id="time"
                 value={this.state.search.time}
                 onChange={this.handleInput}>
-                <option value="1:00">1:00</option>
-                <option value="2:00">2:00</option>
-                <option value="3:00">3:00</option>
-                <option value="4:00">4:00</option>
-                <option value="5:30">5:00</option>
-                <option value="6:00">6:00</option>
-                <option value="7:00">7:00</option>
-                <option value="8:00">8:00</option>
-                <option value="9:00">9:00</option>
+                <option value="1">1:00</option>
+                <option value="2">2:00</option>
+                <option value="3">3:00</option>
+                <option value="4">4:00</option>
+                <option value="5">5:00</option>
+                <option value="6">6:00</option>
+                <option value="7">7:00</option>
+                <option value="8">8:00</option>
+                <option value="9">9:00</option>
               </select>
               <img src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png"/>
             </section>

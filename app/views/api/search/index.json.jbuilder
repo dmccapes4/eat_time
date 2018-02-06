@@ -1,4 +1,4 @@
 json.array! @restaurants do |restaurant|
   json.partial! 'api/restaurants/restaurant', restaurant: restaurant
-  json.times @reservation_times
+  json.reservation_times @reservation_times
 end
