@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class RestaurantDetail extends React.Component {
   constructor(props) {
     super(props);
-    let time;
+    this.reservationTimes = [];
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }
@@ -26,6 +26,7 @@ class RestaurantDetail extends React.Component {
     reservation['date'] = document.getElementById('date').value;
     let numPeople = parseInt(document.getElementById('num_people').value);
     reservation['num_people'] = numPeople;
+    reservation['completed'] = false;
     this.props.requestCreateReservation(reservation);
   }
 
@@ -61,7 +62,8 @@ class RestaurantDetail extends React.Component {
       date = date.toString().split(' ');
     }
 
-    let time = document.getElementById('time').value;
+    let time = document.getElementById('time');
+    if (time) time = time.value;
 
     let reservationTimes = [
       time - 1 === 0 ? '12:00' : `${time - 1}:00`,
@@ -71,7 +73,8 @@ class RestaurantDetail extends React.Component {
       `${parseInt(time) + 1}:00`,
     ];
 
-    let numPeople = document.getElementById('num_people').value;
+    let numPeople = document.getElementById('num_people');
+    if (numPeople) numPeople = numPeople.value;
 
     return (
       <section className="restaurant-detail">
@@ -106,9 +109,14 @@ class RestaurantDetail extends React.Component {
         </section>
         <section className="restaurant-detail-bottom">
           <section className="restaurant-detail-reservation-description">
-            <p>{`Reservation for ${numPeople} people at ${showRestaurant.name}
+            {
+              date ?
+              <p>{`Reservation for ${numPeople} people at ${showRestaurant.name}
                 on ${date.slice(0, 3).join(' ')}, ${date.slice(3, 4)} at
                 ${this.time} PM`}</p>
+              :
+              <p>loading...</p>
+            }
           </section>
           <section className="restaurant-detail-reservation-btn-holder">
             {

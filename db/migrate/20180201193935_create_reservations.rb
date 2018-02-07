@@ -6,6 +6,7 @@ class CreateReservations < ActiveRecord::Migration[5.1]
       t.string :date
       t.string :time
       t.integer :num_people
+      t.boolean :completed
 
       t.timestamps
     end

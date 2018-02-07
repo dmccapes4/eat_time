@@ -51,12 +51,22 @@ class NavBar extends React.Component {
     const display = this.props.user ? (
       <section className="logout-welcome">
         <p>Welcome, {this.props.user.username}</p>
-        <Link to="/profile">
-          <button
-            className="nav-signup-btn view-profile-btn">
-            Profile
-          </button>
-        </Link>
+        {
+          this.props.match.path === '/profile' ?
+          <Link to="/home">
+            <button
+              className="nav-signup-btn view-profile-btn">
+              Home
+            </button>
+          </Link>
+          :
+          <Link to="/profile">
+            <button
+              className="nav-signup-btn view-profile-btn">
+              Profile
+            </button>
+          </Link>
+        }
         <button
           className="nav-signup-btn"
           onClick={this.props.requestLogout.bind(this)}>

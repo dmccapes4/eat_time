@@ -1,2 +1,6 @@
 json.extract! reservation,
-  :user_id, :restaurant_id, :date, :time, :num_people
+  :id, :user_id, :restaurant_id, :date, :time, :num_people, :completed
+
+json.restaurant_name reservation.restaurant.name
+json.restaurant_cuisine reservation.restaurant.cuisine
+json.restaurant_image_url reservation.restaurant.image_url

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180201193935) do
     t.string "date"
     t.string "time"
     t.integer "num_people"
+    t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

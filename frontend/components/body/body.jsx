@@ -13,8 +13,6 @@ import RestaurantIndexContainer
 
 class Body extends React.Component {
   render() {
-    console.log(this.props.match.path);
-    console.log(this.props.match.path === '/profile');
     return(
       <section className="body">
         <NavBarContainer />

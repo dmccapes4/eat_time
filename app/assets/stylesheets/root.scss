@@ -288,11 +288,109 @@ $lightgray: #f0f0f0;
   transition: background 0.5s ease;
 }
 
-.profile {
+.profile-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: $lightgray;
   height: 125px;
+
+  .profile-btn {
+    background: #237b98;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    width: 200px;
+    margin: 50px;
+    height: 50px;
+  }
+
+  .profile-btn:hover {
+    background: #1c627a;
+    cursor: pointer;
+    transition: background 0.5s ease;
+  }
+}
+
+.reservation-list-container {
+  display: flex;
+
+  .reservation-list-left {
+    flex: 1;
+  }
+
+  .reservation-list {
+    flex: 2;
+    margin-top: 10px;
+    height: 500px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    padding-right: 15px;
+
+    .reservation-list-content {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+
+      .reservation-list-content-left {
+        display: flex;
+
+        .reservation-img {
+          width: 150px;
+          height: 150px;
+          overflow: hidden;
+          border-radius: 5px;
+        }
+
+        .reservation-list-info {
+          margin-left: 20px;
+
+          .restaurant-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #237B98;
+            margin-bottom: 15px;
+          }
+
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .reservation-list-btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .reservation-list-btn {
+        color: white;
+        background: #DA3743;
+        height: 40px;
+        width: 200px;
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        margin: 20px;
+      }
+
+      .reservation-list-btn:hover {
+        color: white;
+        background: #b8222d;
+        cursor: pointer;
+        transition: background 0.5s ease;
+      }
+    }
+  }
+
+  .reservation-list-right {
+    flex: 1;
+  }
 }
 
 .restaurant-container {
