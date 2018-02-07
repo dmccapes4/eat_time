@@ -7,6 +7,7 @@ class RestaurantDetail extends React.Component {
     this.reservationTimes = [];
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.state = { reserved: false };
   }
 
   handleInput(e) {
@@ -28,15 +29,23 @@ class RestaurantDetail extends React.Component {
     reservation['num_people'] = numPeople;
     reservation['completed'] = false;
     this.props.requestCreateReservation(reservation);
+    this.setState({ reserved: true });
   }
 
   componentDidMount() {
+    this.setState({ reserved: false });
     this.time = document.getElementById('time').value;
     this.time = `${this.time}:00`;
     document.getElementById('date').addEventListener('change',
       () => {
+        this.setState({ reserved: false });
         this.forceUpdate();
-      });
+    });
+    document.getElementById('time').addEventListener('change',
+      () => {
+        this.setState({ reserved: false });
+        this.forceUpdate();
+    });
     this.props.requestRestaurant(this.props.match.params.restaurantId);
   }
 
@@ -76,6 +85,7 @@ class RestaurantDetail extends React.Component {
     let numPeople = document.getElementById('num_people');
     if (numPeople) numPeople = numPeople.value;
 
+    console.log(this.state.reserved);
     return (
       <section className="restaurant-detail">
         <section className="restaurant-detail-top">
@@ -98,6 +108,7 @@ class RestaurantDetail extends React.Component {
                     key={reservationTime}
                     onClick={(e) => {
                       this.time = e.target.innerText;
+                      this.setState({ reserved: false });
                       this.forceUpdate();
                     }}>
                     {`${reservationTime}`}
@@ -120,7 +131,7 @@ class RestaurantDetail extends React.Component {
           </section>
           <section className="restaurant-detail-reservation-btn-holder">
             {
-              this.props.user ?
+              this.props.user && !this.state.reserved ?
               <button
                 className="reservation-btn"
                 onClick={this.handleSubmit}>

@@ -6,7 +6,7 @@ import { requestCreateReservation } from '../../actions/reservation_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let restaurant = state.entities.restaurants[ownProps.match.params.restaurantId];
-  if (!restaurant) restaurant = state.entities.restaurants[0];
+  if (!restaurant) restaurant = ownProps.defaultRestaurant;
   return {
     restaurant,
     user: state.session.user,

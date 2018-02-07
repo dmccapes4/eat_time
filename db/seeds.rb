@@ -167,3 +167,19 @@ reservation5 = Reservation.create(
   completed: false,
   num_people: 4
 )
+
+
+
+review1 = Review.create(
+  reservation_id: 1,
+  rating: 4,
+  title: 'A nice place.',
+  body: 'My wife and I had a nice meal here.'
+)
+
+review2 = Review.create(
+  reservation_id: 1,
+  rating: 2,
+  title: 'A bad place.',
+  body: 'My wife and I had a bad meal here.'
+)
