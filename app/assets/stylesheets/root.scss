@@ -317,13 +317,12 @@ $lightgray: #f0f0f0;
 
 .reservation-list-container {
   display: flex;
+  justify-content: center;
 
   .reservation-list-left {
-    flex: 1;
   }
 
   .reservation-list {
-    flex: 2;
     margin-top: 10px;
     height: 500px;
     border-radius: 5px;
@@ -337,6 +336,7 @@ $lightgray: #f0f0f0;
 
       .reservation-list-content-left {
         display: flex;
+        margin-right: 60px;
 
         .reservation-img {
           width: 150px;
@@ -389,7 +389,6 @@ $lightgray: #f0f0f0;
   }
 
   .reservation-list-right {
-    flex: 1;
   }
 }
 

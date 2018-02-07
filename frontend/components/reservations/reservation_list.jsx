@@ -24,14 +24,16 @@ class ReservationList extends React.Component {
                   reservation.user_id === this.props.user.id) {
                 return <ReservationListItem
                   key={`${reservation.id}`}
-                  reservation={reservation}/>;
+                  reservation={reservation}
+                  requestDeleteReservation={this.props.requestDeleteReservation}/>;
               }
             }) : reservations.map(reservation => {
               if (!reservation.completed &&
                   reservation.user_id === this.props.user.id) {
                 return <ReservationListItem
                   key={`${reservation.id}`}
-                  reservation={reservation}/>;
+                  reservation={reservation}
+                  requestDeleteReservation={this.props.requestDeleteReservation}/>;
               }
             })
           }

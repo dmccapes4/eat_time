@@ -8,7 +8,12 @@ export default (state = [], action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ERRORS:
-      return action.errors;
+      return state;
+    // return Object.assign(
+    //   {},
+    //   action.errors,
+    //   state
+    // );
     case RECEIVE_CLEAR_ERRORS:
       return [];
     case RECEIVE_LOGIN:

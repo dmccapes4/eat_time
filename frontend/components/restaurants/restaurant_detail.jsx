@@ -56,6 +56,7 @@ class RestaurantDetail extends React.Component {
   }
 
   render() {
+    console.log(`props: ${this.props}`);
     const { restaurant } = this.props;
     let showRestaurant = restaurant;
     if (!showRestaurant) showRestaurant = this.props.defaultRestaurant;
@@ -85,7 +86,6 @@ class RestaurantDetail extends React.Component {
     let numPeople = document.getElementById('num_people');
     if (numPeople) numPeople = numPeople.value;
 
-    console.log(this.state.reserved);
     return (
       <section className="restaurant-detail">
         <section className="restaurant-detail-top">

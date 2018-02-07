@@ -30,7 +30,6 @@ export const fetchUpdateReservation = reservation => {
 export const fetchDeleteReservation = id => {
   return $.ajax({
     method: 'DELETE',
-    url: 'api/reservations',
-    data: { id },
+    url: `api/reservations/${id}`,
   });
 };

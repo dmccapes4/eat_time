@@ -3,9 +3,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :index]
     resource :session, only: [:create, :show, :destroy]
     resources :restaurants, only: [:show, :index]
-    resources :reservations, only: [:create, :show, :index, :update, :delete]
+    resources :reservations
     resources :search, only: [:index]
-    resources :reviews, only: [:create, :show, :index, :update, :delete]
+    resources :reviews
   end
   root to: 'root#root'
 end
