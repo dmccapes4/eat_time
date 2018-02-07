@@ -7,7 +7,6 @@ class RestaurantDetail extends React.Component {
     this.reservationTimes = [];
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
-    this.state = { reserved: false };
   }
 
   handleInput(e) {
@@ -28,22 +27,19 @@ class RestaurantDetail extends React.Component {
     let numPeople = parseInt(document.getElementById('num_people').value);
     reservation['num_people'] = numPeople;
     reservation['completed'] = false;
-    this.props.requestCreateReservation(reservation);
-    this.setState({ reserved: true });
+    this.props.requestCreateReservation(reservation)
+      .then(this.props.history.push("/profile"));
   }
 
   componentDidMount() {
-    this.setState({ reserved: false });
     this.time = document.getElementById('time').value;
     this.time = `${this.time}:00`;
     document.getElementById('date').addEventListener('change',
       () => {
-        this.setState({ reserved: false });
         this.forceUpdate();
     });
     document.getElementById('time').addEventListener('change',
       () => {
-        this.setState({ reserved: false });
         this.forceUpdate();
     });
     this.props.requestRestaurant(this.props.match.params.restaurantId);
@@ -56,7 +52,6 @@ class RestaurantDetail extends React.Component {
   }
 
   render() {
-    console.log(`props: ${this.props}`);
     const { restaurant } = this.props;
     let showRestaurant = restaurant;
     if (!showRestaurant) showRestaurant = this.props.defaultRestaurant;
@@ -126,19 +121,15 @@ class RestaurantDetail extends React.Component {
                 on ${date.slice(0, 3).join(' ')}, ${date.slice(3, 4)} at
                 ${this.time} PM`}</p>
               :
-              <p>loading...</p>
+              <p></p>
             }
           </section>
           <section className="restaurant-detail-reservation-btn-holder">
-            {
-              this.props.user && !this.state.reserved ?
-              <button
-                className="reservation-btn"
-                onClick={this.handleSubmit}>
-                Make Your Reservation!</button> :
-                <section className="gray-reservation-btn">
-                  Make Your Reservation!</section>
-            }
+            <button
+              className="reservation-btn"
+              onClick={this.handleSubmit}>
+              Make Your Reservation!
+            </button>
           </section>
         </section>
       </section>

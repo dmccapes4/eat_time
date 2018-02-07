@@ -18,14 +18,15 @@ class ReservationList extends React.Component {
         <section className="reservation-list-left"></section>
         <ul className="reservation-list">
           {
-            this.props.match.path === '/profile/past' ?
+            this.props.match.path === "/profile/past" ?
             reservations.map(reservation => {
               if (reservation.completed &&
                   reservation.user_id === this.props.user.id) {
                 return <ReservationListItem
                   key={`${reservation.id}`}
                   reservation={reservation}
-                  requestDeleteReservation={this.props.requestDeleteReservation}/>;
+                  requestDeleteReservation={this.props.requestDeleteReservation}
+                  requestUpdateReservation={this.props.requestUpdateReservation}/>;
               }
             }) : reservations.map(reservation => {
               if (!reservation.completed &&
@@ -33,7 +34,8 @@ class ReservationList extends React.Component {
                 return <ReservationListItem
                   key={`${reservation.id}`}
                   reservation={reservation}
-                  requestDeleteReservation={this.props.requestDeleteReservation}/>;
+                  requestDeleteReservation={this.props.requestDeleteReservation}
+                  requestUpdateReservation={this.props.requestUpdateReservation}/>;
               }
             })
           }

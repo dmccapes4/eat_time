@@ -5,6 +5,7 @@ import ReservationList from './reservation_list';
 import {
   requestReservations,
   requestDeleteReservation,
+  requestUpdateReservation,
  } from '../../actions/reservation_actions';
 
 const mapStateToProps = state => ({
@@ -17,6 +18,8 @@ const mapDispatchToProps = dispatch => ({
   requestReservations: () => dispatch(requestReservations()),
   requestDeleteReservation: id =>
     dispatch(requestDeleteReservation(id)),
+  requestUpdateReservation: reservation =>
+    dispatch(requestUpdateReservation(reservation)),
 });
 
 export default withRouter(connect (

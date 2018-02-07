@@ -19,7 +19,11 @@ class Login extends React.Component {
     e.preventDefault();
     this.props.requestLogin(this.state)
     .then(() => {
-      this.props.history.push("/home");
+      if (this.props.match.path === "/splash") {
+        this.props.history.push("/home");
+      } else {
+        this.forceUpdate();
+      }
       this.props.closeLoginModal();
     });
   }

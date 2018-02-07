@@ -219,6 +219,8 @@ $lightgray: #f0f0f0;
   background-position: 50% 50%;
 }
 
+
+
 .session {
   display: flex;
   justify-content: space-between;
@@ -251,9 +253,70 @@ $lightgray: #f0f0f0;
   background-color: rgba(0, 0, 0, .75);
 }
 
+.update-modal {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+  border: none;
+  outline: none;
+}
+
 .ReactModal__Body--open {
   overflow: hidden;
 }
+
+.update-reservation {
+  width: 750px;
+  padding: 50px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: white;
+}
+
+.update-reservation h2 {
+  font-size: 20;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.update-btn {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background: #DA3743;
+  font-size: 15px;
+}
+
+.update-btn:hover {
+  color: white;
+  background: #b8222d;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.update-form-bottom {
+  padding-top: 20px;
+}
+
+.update-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 40px;
+  height: 100px;
+  
+  .reservation-btn {
+    height: 50px;
+    border-radius: 5px;
+  }
+}
+
 
 .errors {
   font-size: 12px;

@@ -131,7 +131,7 @@ reservation1 = Reservation.create(
   user_id: 1,
   restaurant_id: 1,
   date: "02/02/2018",
-  time: "19:00",
+  time: "7:00",
   completed: true,
   num_people: 2
 )
@@ -139,7 +139,7 @@ reservation2 = Reservation.create(
   user_id: 1,
   restaurant_id: 2,
   date: "02/05/2018",
-  time: "18:00",
+  time: "6:00",
   completed: true,
   num_people: 2
 )
@@ -147,7 +147,7 @@ reservation3 = Reservation.create(
   user_id: 1,
   restaurant_id: 6,
   date: "02/17/2018",
-  time: "20:00",
+  time: "8:00",
   completed: false,
   num_people: 3
 )
@@ -155,7 +155,7 @@ reservation4 = Reservation.create(
   user_id: 1,
   restaurant_id: 11,
   date: "02/12/2018",
-  time: "19:00",
+  time: "7:00",
   completed: false,
   num_people: 5
 )
@@ -163,7 +163,7 @@ reservation5 = Reservation.create(
   user_id: 1,
   restaurant_id: 9,
   date: "02/15/2018",
-  time: "21:00",
+  time: "9:00",
   completed: false,
   num_people: 4
 )

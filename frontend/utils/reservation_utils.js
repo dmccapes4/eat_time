@@ -22,7 +22,7 @@ export const fetchCreateReservation = reservation => {
 export const fetchUpdateReservation = reservation => {
   return $.ajax({
     method: 'PATCH',
-    url: 'api/reservations',
+    url: `api/reservations/${reservation.id}`,
     data: { reservation }
   });
 };

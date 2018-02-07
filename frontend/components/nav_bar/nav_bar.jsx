@@ -11,7 +11,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       openLogin: false,
-      openSignup: false
+      openSignup: false,
     };
     this.openLoginModal = this.openLoginModal.bind(this);
     this.closeLoginModal = this.closeLoginModal.bind(this);
@@ -44,7 +44,7 @@ class NavBar extends React.Component {
 
   demoLogin() {
     this.props.requestLogin({username: 'Demo', email: '_', password: '______'});
-    this.props.history.push("/home");
+    this.forceUpdate();
   }
 
   render() {
@@ -53,7 +53,7 @@ class NavBar extends React.Component {
         <p>Welcome, {this.props.user.username}</p>
         {
           this.props.match.path === '/profile' ?
-          <Link to="/home">
+          <Link to="/restaurant/1">
             <button
               className="nav-signup-btn view-profile-btn">
               Home
