@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import UpdateReservationContainer from './update_reservation_container';
+import ReviewContainer from '../reviews/review_container';
 
 
 class ReservationListItem extends React.Component {
@@ -54,7 +55,8 @@ class ReservationListItem extends React.Component {
               {
                 reservation.completed ?
                   <button
-                    className="reservation-list-btn">
+                    className="reservation-list-btn"
+                    onClick={this.openReviewModal.bind(this)}>
                     Review Reservation
                   </button> :
                   <button
@@ -72,11 +74,20 @@ class ReservationListItem extends React.Component {
 
             <Modal
               isOpen={this.state.openUpdate}
-              onRequestClose={this.closeUpdateModal}
+              onRequestClose={this.closeUpdateModal.bind(this)}
               ariaHideApp={false}
               className={{base: "update-modal"}}>
               <UpdateReservationContainer
-                closeUpdateModal={this.closeUpdateModal}
+                closeUpdateModal={this.closeUpdateModal.bind(this)}
+                reservation={reservation} />
+            </Modal>
+            <Modal
+              isOpen={this.state.openReview}
+              onRequestClose={this.closeUpdateModal.bind(this)}
+              ariaHideApp={false}
+              className={{base: "modal"}}>
+              <ReviewContainer
+                closeUpdateModal={this.closeReviewModal.bind(this)}
                 reservation={reservation} />
             </Modal>
           </section>

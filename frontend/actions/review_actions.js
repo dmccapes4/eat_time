@@ -39,7 +39,7 @@ export const requestReviews = () => dispatch => (
     .then((reviews) => dispatch(receiveReviews(reviews)))
 );
 
-export const requestCreateReservation = review => dispatch => (
+export const requestCreateReview = review => dispatch => (
   fetchCreateReview(review)
     .then((serverReview) =>
       dispatch(receiveReview(serverReview)),
@@ -53,7 +53,7 @@ export const requestUpdateReview = review => dispatch => (
     errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
-export const requestDeleteReservation = id => dispatch => (
+export const requestDeleteReview = id => dispatch => (
   fetchDeleteReview(id)
     .then(() => dispatch(receiveDeleteReview(id)))
 );

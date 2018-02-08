@@ -52,7 +52,9 @@ class NavBar extends React.Component {
       <section className="logout-welcome">
         <p>Welcome, {this.props.user.username}</p>
         {
-          this.props.match.path === '/profile' ?
+          (this.props.match.path === '/profile' ||
+           this.props.match.path === '/profile/past' ||
+           this.props.match.path === '/profile/future') ?
           <Link to="/restaurant/1">
             <button
               className="nav-signup-btn view-profile-btn">
