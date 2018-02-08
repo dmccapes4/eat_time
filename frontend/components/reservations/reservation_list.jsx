@@ -25,6 +25,7 @@ class ReservationList extends React.Component {
                 return <ReservationListItem
                   key={`${reservation.id}`}
                   reservation={reservation}
+                  requestClearErrors={this.props.requestClearErrors}
                   requestDeleteReservation={this.props.requestDeleteReservation}
                   requestUpdateReservation={this.props.requestUpdateReservation}/>;
               }
@@ -34,6 +35,7 @@ class ReservationList extends React.Component {
                 return <ReservationListItem
                   key={`${reservation.id}`}
                   reservation={reservation}
+                  requestClearErrors={this.props.requestClearErrors}
                   requestDeleteReservation={this.props.requestDeleteReservation}
                   requestUpdateReservation={this.props.requestUpdateReservation}/>;
               }

@@ -24,23 +24,26 @@ class Review extends React.Component {
     };
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     return(
       <section className="session">
         <form>
           <h2>Write a Review!</h2>
+            <section className="errors">
+              {this.renderErrors()}
+            </section>
           <div className="input-fields">
             <label>Title:</label>
             <input
@@ -71,7 +74,7 @@ class Review extends React.Component {
           </div>
           <div className="session-btn-div">
             <button
-              className="session-btn"
+              className="session-btn review-btn"
               onClick={this.handleSubmit}>
               Post Review
             </button>

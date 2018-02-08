@@ -18,6 +18,10 @@ class ReservationListItem extends React.Component {
     this.closeReviewModal = this.closeReviewModal.bind(this);
   }
 
+  componentWillMount() {
+    Modal.setAppElement('body');
+  }
+
   openUpdateModal() {
     this.setState({ openUpdate: true });
   }
@@ -31,6 +35,7 @@ class ReservationListItem extends React.Component {
   }
 
   closeReviewModal() {
+    this.props.requestClearErrors();
     this.setState({ openReview: false });
   }
 
@@ -58,7 +63,8 @@ class ReservationListItem extends React.Component {
                     className="reservation-list-btn"
                     onClick={this.openReviewModal.bind(this)}>
                     Review Reservation
-                  </button> :
+                  </button>
+                  :
                   <button
                     className="reservation-list-btn"
                     onClick={this.openUpdateModal.bind(this)}>
@@ -74,20 +80,21 @@ class ReservationListItem extends React.Component {
 
             <Modal
               isOpen={this.state.openUpdate}
-              onRequestClose={this.closeUpdateModal.bind(this)}
+              onRequestClose={this.closeUpdateModal}
               ariaHideApp={false}
               className={{base: "update-modal"}}>
               <UpdateReservationContainer
-                closeUpdateModal={this.closeUpdateModal.bind(this)}
+                closeUpdateModal={this.closeUpdateModal}
                 reservation={reservation} />
             </Modal>
             <Modal
               isOpen={this.state.openReview}
-              onRequestClose={this.closeUpdateModal.bind(this)}
+
+              onRequestClose={this.closeReviewModal}
               ariaHideApp={false}
               className={{base: "modal"}}>
               <ReviewContainer
-                closeUpdateModal={this.closeReviewModal.bind(this)}
+                closeReviewModal={this.closeReviewModal}
                 reservation={reservation} />
             </Modal>
           </section>

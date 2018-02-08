@@ -259,11 +259,12 @@ $lightgray: #f0f0f0;
   margin: 60px auto;
   border: none;
   outline: none;
+  width: 720px;
 }
 
-.ReactModal__Body--open {
-  overflow: hidden;
-}
+// .ReactModal__Body--open {
+//   overflow: hidden;
+// }
 
 .update-reservation {
   width: 750px;
@@ -310,7 +311,7 @@ $lightgray: #f0f0f0;
   margin-top: 20px;
   padding: 40px;
   height: 100px;
-  
+
   .reservation-btn {
     height: 50px;
     border-radius: 5px;
@@ -349,6 +350,12 @@ $lightgray: #f0f0f0;
   background: #1c627a;
   cursor: pointer;
   transition: background 0.5s ease;
+}
+
+.review-btn {
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
 }
 
 .profile-nav {

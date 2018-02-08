@@ -6,12 +6,15 @@ import {
   requestCreateReview,
   requestDeleteReview,
 } from '../../actions/review_actions';
+import { requestClearErrors } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   closeReviewModal: ownProps.closeReviewModal,
+  errors: state.errors,
 });
 
 const mapDispatchToProps = dispatch => ({
+  requestClearErrors: () => dispatch(requestClearErrors()),
   requestCreateReview: review => dispatch(requestCreateReview(review)),
   requestDeleteReview: review => dispatch(requestDeleteReview(review)),
 });

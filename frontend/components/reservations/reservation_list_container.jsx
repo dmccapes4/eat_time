@@ -7,6 +7,7 @@ import {
   requestDeleteReservation,
   requestUpdateReservation,
  } from '../../actions/reservation_actions';
+ import { requestClearErrors } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   reservations: Object.keys(state.entities.reservations)
@@ -15,6 +16,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  requestClearErrors: () => dispatch(requestClearErrors()),
   requestReservations: () => dispatch(requestReservations()),
   requestDeleteReservation: id =>
     dispatch(requestDeleteReservation(id)),

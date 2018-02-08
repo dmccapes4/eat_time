@@ -44,7 +44,11 @@ class NavBar extends React.Component {
 
   demoLogin() {
     this.props.requestLogin({username: 'Demo', email: '_', password: '______'});
-    this.forceUpdate();
+    if (this.props.match.path === './home') {
+      this.props.history.push('/restaurant/1');
+    } else {
+      this.forceUpdate();
+    }
   }
 
   render() {
