@@ -9,10 +9,12 @@ class ReservationList extends React.Component {
 
   componentDidMount() {
     this.props.requestReservations();
+    this.props.requestReviews();
   }
 
   render () {
     const { reservations } = this.props;
+    const { reviews } = this.props;
     return (
       <section className="reservation-list-container">
         <section className="reservation-list-left"></section>
@@ -20,11 +22,18 @@ class ReservationList extends React.Component {
           {
             this.props.match.path === "/profile/past" ?
             reservations.map(reservation => {
+              let thisReview;
+              reviews.forEach(review => {
+                if (review.reservation_id === reservation.id) {
+                  thisReview = review;
+                }
+              });
               if (reservation.completed &&
                   reservation.user_id === this.props.user.id) {
                 return <ReservationListItem
                   key={`${reservation.id}`}
                   reservation={reservation}
+                  review={thisReview}
                   requestDeleteReview={this.props.requestDeleteReview}
                   requestClearErrors={this.props.requestClearErrors}
                   requestDeleteReservation={this.props.requestDeleteReservation}

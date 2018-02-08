@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import StarRating from 'star-rating-react';
 
 class RestaurantDetail extends React.Component {
   constructor(props) {
@@ -57,6 +58,9 @@ class RestaurantDetail extends React.Component {
     if (!showRestaurant) showRestaurant = this.props.defaultRestaurant;
     if (!showRestaurant) return null;
 
+    console.log(showRestaurant);
+    console.log(showRestaurant.reviews);
+
     let date = document.getElementById('date');
     if (date) {
       date = date.value;
@@ -95,6 +99,11 @@ class RestaurantDetail extends React.Component {
               </li>
               <li>{showRestaurant.cuisine}</li>
             </ul>
+            <section className="restaurant-detail-rating">
+              <StarRating
+                value={showRestaurant.rating} />
+              <p>{`from ${showRestaurant.num_reviews} reviews`}</p>
+            </section>
             <ul className="available-reservations">
               {
                 reservationTimes.map(reservationTime => (
@@ -130,6 +139,22 @@ class RestaurantDetail extends React.Component {
               onClick={this.handleSubmit}>
               Make Your Reservation!
             </button>
+          </section>
+          <section className="restaurant-reviews">
+            <ul className="restaurant-reviews-list">
+              {
+                showRestaurant.reviews.map(review => {
+                  return (
+                    <li className="restaurant-review-item">
+                      <p>{review.title}</p>
+                      <StarRating
+                        value={review.rating} />
+                      <p>{review.body}</p>
+                    </li>
+                  );
+                })
+              }
+            </ul>
           </section>
         </section>
       </section>

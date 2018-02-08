@@ -754,6 +754,12 @@ $lightgray: #f0f0f0;
 
     .restaurant-reservation-info {
 
+      .restaurant-detail-rating {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 10px;
+      }
+
       .restaurant-detail-info {
         margin: 15px;
 
@@ -766,6 +772,7 @@ $lightgray: #f0f0f0;
           font-weight: 600;
           color: #237B98;
         }
+
       }
 
       .available-reservations {
@@ -790,6 +797,30 @@ $lightgray: #f0f0f0;
     align-items: center;
     padding: 40px;
     height: 100px;
+
+    .restaurant-reviews {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 20px;
+
+      .restaurant-reviews-list {
+        height: 200px;
+        overflow-y: scroll;
+        padding-right: 15px;
+
+        .restaurant-review-item {
+          padding: 10px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          width: 300px;
+        }
+      }
+
+      p {
+        margin: 10px;
+      }
+    }
 
     .reservation-btn {
       height: 50px;

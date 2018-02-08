@@ -41,7 +41,9 @@ class ReservationListItem extends React.Component {
 
   render() {
     const { reservation } = this.props;
-
+    const { review } = this.props;
+    console.log(this.props);
+    console.log(review);
     return (
         <li>
           <section className="reservation-list-content">
@@ -55,12 +57,12 @@ class ReservationListItem extends React.Component {
                 <p className="reservation-date">{reservation.date}</p>
                 <p className="reservation-time">{`${reservation.time} PM`}</p>
                 {
-                  reservation.review
+                  review
                   ?
                   <p
                     className="review-link"
                     onClick={this.openReviewModal.bind(this)}
-                    >{reservation.review.title}</p>
+                    >{review.title}</p>
                   :
                   null
                 }
@@ -70,13 +72,12 @@ class ReservationListItem extends React.Component {
               {
                 reservation.completed
                 ?
-                  reservation.review
+                  review
                   ?
                   <button
                     className="reservation-list-btn"
                     onClick={() => {
-                      this.props.requestDeleteReview(reservation.review_id)
-                        .then(this.forceUpdate());
+                      this.props.requestDeleteReview(review.id);
                     }}>
                     Delete Review
                   </button>
@@ -116,7 +117,8 @@ class ReservationListItem extends React.Component {
               className={{base: "review-modal"}}>
               <ReviewContainer
                 closeReviewModal={this.closeReviewModal}
-                reservation={reservation} />
+                reservation={reservation}
+                review={review} />
             </Modal>
           </section>
         </li>

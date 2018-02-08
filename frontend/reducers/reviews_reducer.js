@@ -17,7 +17,7 @@ export default (state = {}, action) => {
       );
     case RECEIVE_REVIEWS:
       action.reviews.forEach((review) => {
-        review[review.id] = review;
+        reviews[review.id] = review;
       });
       return reviews;
     case RECEIVE_DELETE_REVIEW:
