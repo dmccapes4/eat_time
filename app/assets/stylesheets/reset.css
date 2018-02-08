@@ -81,3 +81,7 @@ ul {
 p {
 	color: black;
 }
+
+select {
+	cursor: pointer;
+}

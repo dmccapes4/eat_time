@@ -262,9 +262,9 @@ $lightgray: #f0f0f0;
   width: 720px;
 }
 
-// .ReactModal__Body--open {
-//   overflow: hidden;
-// }
+.ReactModal__Body--open {
+  overflow: hidden;
+}
 
 .update-reservation {
   width: 750px;
@@ -318,7 +318,6 @@ $lightgray: #f0f0f0;
   }
 }
 
-
 .errors {
   font-size: 12px;
 }
@@ -352,11 +351,50 @@ $lightgray: #f0f0f0;
   transition: background 0.5s ease;
 }
 
-.review-btn {
-  width: 120px;
-  height: 40px;
-  font-size: 15px;
+.review-modal {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+  width: 500px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, .75);
 }
+
+.review-session {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  width: 500px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: white;
+
+  .input-fields {
+    width: 450px;
+  }
+
+  .review-title {
+    width: 300px;
+  }
+
+  .review-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .star-rating {
+
+  }
+
+  .review-body {
+    width: 300px;
+    height: 150px;
+    margin-left: 20px;
+  }
+}
+
 
 .profile-nav {
   display: flex;
@@ -427,6 +465,16 @@ $lightgray: #f0f0f0;
 
           p {
             margin-bottom: 10px;
+          }
+
+          .review-link {
+            color: blue;
+            text-decoration: underline;
+          }
+
+          .review-link:hover {
+            cursor: pointer;
+            color: darkblue;
           }
         }
       }

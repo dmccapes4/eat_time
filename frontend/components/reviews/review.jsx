@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from 'star-rating-react';
 
 class Review extends React.Component {
   constructor(props) {
@@ -9,13 +10,22 @@ class Review extends React.Component {
       title: "",
       body: "",
     };
+    if (this.props.reservation.review) {
+      this.state = this.props.reservation.review;
+    }
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.requestCreateReview(this.state)
-      .then(() => this.props.closeUpdateModal());
+    if (this.props.reservation.review) {
+      this.props.requestUpdateReview(this.state)
+        .then(() => this.props.closeReviewModal());
+    } else {
+      this.props.requestCreateReview(this.state)
+        .then(() => this.props.closeReviewModal());
+    }
   }
 
   handleInput(type) {
@@ -38,7 +48,7 @@ class Review extends React.Component {
 
   render() {
     return(
-      <section className="session">
+      <section className="review-session">
         <form>
           <h2>Write a Review!</h2>
             <section className="errors">
@@ -47,6 +57,7 @@ class Review extends React.Component {
           <div className="input-fields">
             <label>Title:</label>
             <input
+              className="review-title"
               type="text"
               value={this.state.title}
               onChange={this.handleInput('title')}
@@ -54,30 +65,38 @@ class Review extends React.Component {
           </div>
           <div className="input-fields">
             <label>Rating:</label>
-            <select
+            <StarRating
+              name="star-rating"
+              className="star-rating"
+              totalStars={5}
               value={this.state.rating}
-              onChange={this.handleInput('rating')}>
-              <option value="1">1 star</option>
-              <option value="2">2 star</option>
-              <option value="3">3 star</option>
-              <option value="4">4 star</option>
-              <option value="5">5 star</option>
-            </select>
+              onChange={(val) => { this.setState({ rating: val }); }} />
           </div>
           <div className="input-fields">
             <label>Review:</label>
-            <input
+            <textarea
+              className="review-body"
               type="textarea"
-              value={this.state.password}
+              value={this.state.body}
               onChange={this.handleInput('body')}
               />
           </div>
           <div className="session-btn-div">
-            <button
-              className="session-btn review-btn"
-              onClick={this.handleSubmit}>
-              Post Review
-            </button>
+            {
+              this.props.reservation.review
+              ?
+              <button
+                className="session-btn review-btn"
+                onClick={this.handleSubmit}>
+                Update Review
+              </button>
+              :
+              <button
+                className="session-btn review-btn"
+                onClick={this.handleSubmit}>
+                Post Review
+              </button>
+            }
           </div>
         </form>
       </section>

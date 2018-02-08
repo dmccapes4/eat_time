@@ -24,7 +24,7 @@ restaurant1 = Restaurant.create(
   cuisine: 'Mexican',
   max_capacity: 4,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517498857/sandbar_grrdsk.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518061387/sandbar_az757t.jpg"
 )
 restaurant2 = Restaurant.create(
   name: 'Sushi a go go',
@@ -34,7 +34,7 @@ restaurant2 = Restaurant.create(
   cuisine: 'Japanese',
   max_capacity: 4,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517502908/sushi_a_go_go_aquufa.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518061530/sushi-go-go_znqcj0.jpg"
 )
 restaurant3 = Restaurant.create(
   name: 'Lure Fish House',
@@ -44,7 +44,7 @@ restaurant3 = Restaurant.create(
   cuisine: 'Seafood',
   max_capacity: 3,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517499162/lure_fish_house_vytkoa.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518061630/lure-fish-house_houfix.jpg"
 )
 restaurant4 = Restaurant.create(
   name: 'Toma Restaurant and Bar',
@@ -54,7 +54,7 @@ restaurant4 = Restaurant.create(
   cuisine: 'Italian',
   max_capacity: 3,
   time: 2,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517504203/toma-restaurant_k40wkw.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518061705/toma-restaurant-and-bar_avbg5r.jpg"
 )
 restaurant5 = Restaurant.create(
   name: 'Tres Hermanas',
@@ -64,7 +64,7 @@ restaurant5 = Restaurant.create(
   cuisine: 'Mexican',
   max_capacity: 3,
   time: 2,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517511767/tres_hermanas_uktmra.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518061792/tres-hermanas_u5xbcr.jpg"
 )
 restaurant6 = Restaurant.create(
   name: 'Arigato Sushi',
@@ -74,7 +74,7 @@ restaurant6 = Restaurant.create(
   cuisine: 'Japanese',
   max_capacity: 2,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517512040/arigato_sushi_dyhpa1.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518061937/arigato-sushi_c6swdb.jpg"
 )
 restaurant7 = Restaurant.create(
   name: 'Scott\'s Seafood on the River',
@@ -84,7 +84,7 @@ restaurant7 = Restaurant.create(
   cuisine: 'Seafood',
   max_capacity: 5,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517513113/scotts-seafood-on-the-river_mjdhav.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062014/scotts-seafood_ntklbl.jpg"
 )
 restaurant8 = Restaurant.create(
   name: 'La Trattoria Bohemia',
@@ -94,7 +94,7 @@ restaurant8 = Restaurant.create(
   cuisine: 'Italian',
   max_capacity: 4,
   time: 1,
-  image_url: "http://res.cloudinary.com/mccapes-construction/image/upload/v1517513256/la-trattoria-bohemia_fjecxu.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062108/la-trattoria-bohemia_rjbgdl.jpg"
 )
 restaurant9 = Restaurant.create(
   name: 'Hog Island Oyster Company',
@@ -104,7 +104,7 @@ restaurant9 = Restaurant.create(
   cuisine: 'Seafood',
   max_capacity: 3,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517512229/hog-island-oyster-company_xjztef.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062211/hog-island_julkgu.jpg"
 )
 restaurant10 = Restaurant.create(
   name: 'E Tutto Qua',
@@ -114,7 +114,7 @@ restaurant10 = Restaurant.create(
   cuisine: 'Italian',
   max_capacity: 3,
   time: 2,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517512403/e_tutto_qua_juyr79.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062314/e-tutto-qua_mdmjv2.jpg"
 )
 restaurant11 = Restaurant.create(
   name: 'Betty Lou\'s Seafood & Grill',
@@ -124,8 +124,247 @@ restaurant11 = Restaurant.create(
   cuisine: 'Seafood',
   max_capacity: 3,
   time: 1,
-  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1517513416/betty-lous-seafood-_-grill_lxvr7v.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062443/betty-lous_zsg6ub.jpg"
 )
+
+restaurant12 = Restaurant.create(
+  name: 'Outerlands',
+  address: '4001 Judah Street',
+  state: 'California',
+  city: 'San Francisco',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062778/outerlands_dnt2bm.jpg"
+)
+
+restaurant13 = Restaurant.create(
+  name: 'Hong Kong Lounge II',
+  address: '3300 Geary Blvd',
+  state: 'California',
+  city: 'San Francisco',
+  cuisine: 'Chinese',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518062976/hong-kong-lounge_p0ck6y.jpg"
+)
+
+restaurant14 = Restaurant.create(
+  name: 'SPQR',
+  address: '1911 Fillmore Street',
+  state: 'California',
+  city: 'San Francisco',
+  cuisine: 'Italian',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518063246/spqr_b3onrv.jpg"
+)
+
+restaurant15 = Restaurant.create(
+  name: 'Don Pistos',
+  address: '510 Union Street',
+  state: 'California',
+  city: 'San Francisco',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518069354/don-pistos_fmkfn6.jpg"
+)
+
+restaurant16 = Restaurant.create(
+  name: 'Tropisueno',
+  address: '75 Yerba Buena Lane',
+  state: 'California',
+  city: 'San Francisco',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "http://res.cloudinary.com/mccapes-construction/image/upload/v1518063728/tropisueno_ottbip.jpg"
+)
+
+restaurant17 = Restaurant.create(
+  name: 'Los Agaves Restaurant',
+  address: '600 North Milpas Street',
+  state: 'California',
+  city: 'Santa Barbara',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518063880/los-agaves_fw3qlx.jpg"
+)
+
+restaurant17 = Restaurant.create(
+  name: 'Chuck\'s Waterfront Grill',
+  address: '113 Harbor Way',
+  state: 'California',
+  city: 'Santa Barbara',
+  cuisine: 'Seafood',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518064121/chucks-waterfront-grill_xpipsf.jpg"
+)
+
+restaurant18 = Restaurant.create(
+  name: 'Opal Restaurant and Bar',
+  address: '1325 State Street',
+  state: 'California',
+  city: 'Santa Barbara',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518064262/opal-restaurant_i7xler.jpg"
+)
+
+restaurant19 = Restaurant.create(
+  name: 'Rio City Cafe',
+  address: '1110 Front Street',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518102049/rio-city-cafe_idnkyh.jpg"
+)
+
+restaurant20 = Restaurant.create(
+  name: 'Frank Fat\'s',
+  address: '806 L Street',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'Chinese',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518102246/frank-fats_zolfah.jpg"
+)
+
+restaurant21 = Restaurant.create(
+  name: 'Firehouse Restaurant',
+  address: '1112 2nd Street Sacramento',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518102765/firehouse_grcv1s.jpg"
+)
+
+restaurant22 = Restaurant.create(
+  name: 'Zocalo Midtown',
+  address: '1801 Capial Avenue',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518102989/zocala_pwdq4t.jpg"
+)
+
+restaurant23 = Restaurant.create(
+  name: 'Ernesto\'s Mexican Food',
+  address: '1901 16th Street',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518102989/zocala_pwdq4t.jpg"
+)
+
+restaurant23 = Restaurant.create(
+  name: 'Azul Mexican Food & Tequila Bar',
+  address: '1050 20th Street',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518103346/azul_qbxw9b.jpg"
+)
+
+restaurant24 = Restaurant.create(
+  name: 'Station 16',
+  address: '1118 16th Street',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'Seafood',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518103487/station-16_aaapoy.jpg"
+)
+
+restaurant25 = Restaurant.create(
+  name: 'Railroad Fish & Chips',
+  address: '1100 Front Street',
+  state: 'California',
+  city: 'Sacramento',
+  cuisine: 'Seafood',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518103713/railroad-fish-and-chips_g3u6sz.jpg"
+)
+
+restaurant26 = Restaurant.create(
+  name: 'Jean-Georges',
+  address: '1 Central Park West',
+  state: 'New York',
+  city: 'New York',
+  cuisine: 'French',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518105993/jean-georges_k0ec3n.jpg"
+)
+
+restaurant27 = Restaurant.create(
+  name: 'Carmine\'s Italian Restaurant - Times Square',
+  address: '200 West 44th Street',
+  state: 'New York',
+  city: 'New York',
+  cuisine: 'Italian',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518106133/carmines-italian-restaurant_r0wcge.jpg"
+)
+
+restaurant28 = Restaurant.create(
+  name: 'Blue Hill',
+  address: '75 Washington Place',
+  state: 'New York',
+  city: 'New York',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518106414/blue-hill_d0eaxa.jpg"
+)
+
+restaurant29 = Restaurant.create(
+  name: 'Eleven Madison Park',
+  address: '11 Madison Avenue',
+  state: 'New York',
+  city: 'New York',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518106645/eleven-madison-park_ivlwvx.jpg"
+)
+
+restaurant30 = Restaurant.create(
+  name: 'Danial',
+  address: '60 East 65th Street',
+  state: 'New York',
+  city: 'New York',
+  cuisine: 'French',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518106763/daniel_lyggqq.jpg"
+)
+
+
+
+
+
+
+
+
 
 reservation1 = Reservation.create(
   user_id: 1,

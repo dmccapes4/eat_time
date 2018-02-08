@@ -19,7 +19,6 @@ class UpdateReservation extends React.Component {
     let numPeople = parseInt(document.getElementById('update-num-people').value);
     reservation['num_people'] = numPeople;
     reservation['completed'] = false;
-    console.log(reservation);
     this.props.requestUpdateReservation(reservation)
       .then(this.props.closeUpdateModal());
   }

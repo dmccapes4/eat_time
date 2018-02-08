@@ -5,6 +5,7 @@ import Review from './review';
 import {
   requestCreateReview,
   requestDeleteReview,
+  requestUpdateReview,
 } from '../../actions/review_actions';
 import { requestClearErrors } from '../../actions/session_actions';
 
@@ -16,7 +17,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   requestClearErrors: () => dispatch(requestClearErrors()),
   requestCreateReview: review => dispatch(requestCreateReview(review)),
-  requestDeleteReview: review => dispatch(requestDeleteReview(review)),
+  requestDeleteReview: id => dispatch(requestDeleteReview(id)),
+  requestUpdateReview: review => dispatch(requestUpdateReview(review)),
 });
 
 export default withRouter(connect (

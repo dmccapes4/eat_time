@@ -54,22 +54,44 @@ class ReservationListItem extends React.Component {
                 <p className="reservation-num-people">{`${reservation.num_people} people`}</p>
                 <p className="reservation-date">{reservation.date}</p>
                 <p className="reservation-time">{`${reservation.time} PM`}</p>
+                {
+                  reservation.review
+                  ?
+                  <p
+                    className="review-link"
+                    onClick={this.openReviewModal.bind(this)}
+                    >{reservation.review.title}</p>
+                  :
+                  null
+                }
               </section>
             </section>
             <section className="reservation-list-btns">
               {
-                reservation.completed ?
+                reservation.completed
+                ?
+                  reservation.review
+                  ?
+                  <button
+                    className="reservation-list-btn"
+                    onClick={() => {
+                      this.props.requestDeleteReview(reservation.review_id)
+                        .then(this.forceUpdate());
+                    }}>
+                    Delete Review
+                  </button>
+                  :
                   <button
                     className="reservation-list-btn"
                     onClick={this.openReviewModal.bind(this)}>
                     Review Reservation
                   </button>
-                  :
-                  <button
-                    className="reservation-list-btn"
-                    onClick={this.openUpdateModal.bind(this)}>
-                    Update Reservation
-                  </button>
+                :
+                <button
+                  className="reservation-list-btn"
+                  onClick={this.openUpdateModal.bind(this)}>
+                  Update Reservation
+                </button>
               }
               <button
                 className="reservation-list-btn"
@@ -89,10 +111,9 @@ class ReservationListItem extends React.Component {
             </Modal>
             <Modal
               isOpen={this.state.openReview}
-
               onRequestClose={this.closeReviewModal}
               ariaHideApp={false}
-              className={{base: "modal"}}>
+              className={{base: "review-modal"}}>
               <ReviewContainer
                 closeReviewModal={this.closeReviewModal}
                 reservation={reservation} />

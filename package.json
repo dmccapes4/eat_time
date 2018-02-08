@@ -18,11 +18,13 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-page-transition": "^3.0.2",
+    "react-star-rating": "^1.4.2",
     "react-star-ratings": "^2.2.0",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "star-rating-react": "0.0.1",
     "webpack": "^3.5.6"
   },
   "devDependencies": {

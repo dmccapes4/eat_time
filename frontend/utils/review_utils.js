@@ -28,6 +28,7 @@ export const fetchUpdateReview = review => {
 };
 
 export const fetchDeleteReview = id => {
+  console.log(`review id fetch: ${id}`);
   return $.ajax({
     method: 'DELETE',
     url: `api/reviews/${id}`,

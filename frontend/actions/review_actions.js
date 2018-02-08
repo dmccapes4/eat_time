@@ -53,7 +53,7 @@ export const requestUpdateReview = review => dispatch => (
     errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
-export const requestDeleteReview = id => dispatch => (
-  fetchDeleteReview(id)
-    .then(() => dispatch(receiveDeleteReview(id)))
-);
+export const requestDeleteReview = id => dispatch => {
+  return fetchDeleteReview(id)
+    .then(() => dispatch(receiveDeleteReview(id)));
+};
