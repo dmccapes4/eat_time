@@ -30,6 +30,7 @@ class SearchForm extends React.Component {
     date = `${date.getFullYear()}-${month}-${day}`;
 
     document.getElementById('date').value = date;
+    document.getElementById('date').min = date;
   }
 
   openCalendarModal() {

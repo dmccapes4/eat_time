@@ -42,8 +42,6 @@ class ReservationListItem extends React.Component {
   render() {
     const { reservation } = this.props;
     const { review } = this.props;
-    console.log(this.props);
-    console.log(review);
     return (
         <li>
           <section className="reservation-list-content">

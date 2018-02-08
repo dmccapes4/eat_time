@@ -58,8 +58,6 @@ class RestaurantDetail extends React.Component {
     if (!showRestaurant) showRestaurant = this.props.defaultRestaurant;
     if (!showRestaurant) return null;
 
-    console.log(showRestaurant);
-    console.log(showRestaurant.reviews);
 
     let date = document.getElementById('date');
     if (date) {
@@ -101,7 +99,9 @@ class RestaurantDetail extends React.Component {
             </ul>
             <section className="restaurant-detail-rating">
               <StarRating
-                value={showRestaurant.rating} />
+                value={showRestaurant.rating}
+                disabled={true}
+                editing={false} />
               <p>{`from ${showRestaurant.num_reviews} reviews`}</p>
             </section>
             <ul className="available-reservations">
@@ -148,7 +148,9 @@ class RestaurantDetail extends React.Component {
                     <li className="restaurant-review-item">
                       <p>{review.title}</p>
                       <StarRating
-                        value={review.rating} />
+                        value={review.rating}
+                        disabled={true}
+                        editing={false} />
                       <p>{review.body}</p>
                     </li>
                   );

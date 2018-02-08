@@ -9,6 +9,7 @@ const _nullSession = {
 
 export default (state = _nullSession, action) => {
   Object.freeze(state);
+  console.log(action);
   switch (action.type) {
     case RECEIVE_LOGIN:
       return Object.assign ({}, { user: action.user });

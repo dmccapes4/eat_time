@@ -11,7 +11,7 @@ class Review extends React.Component {
       body: "",
     };
     if (this.props.reservation.review) {
-      this.state = this.props.reservation.review;
+      this.state = this.props.review;
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,7 +19,7 @@ class Review extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.props.reservation.review) {
+    if (this.props.review) {
       this.props.requestUpdateReview(this.state)
         .then(() => this.props.closeReviewModal());
     } else {
@@ -83,7 +83,7 @@ class Review extends React.Component {
           </div>
           <div className="session-btn-div">
             {
-              this.props.reservation.review
+              this.props.review
               ?
               <button
                 className="session-btn review-btn"

@@ -10,6 +10,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rammetto+One" />
 
+    <% if current_user %>
+    <script>
+      window.user = {
+        "id": <%= current_user.id %>,
+        "username": "<%= current_user.username %>",
+        "email": "<%= current_user.email %>"
+      }
+    </script>
+    <% end %>
   </head>
 
   <body>

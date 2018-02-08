@@ -451,6 +451,12 @@ $lightgray: #f0f0f0;
           height: 150px;
           overflow: hidden;
           border-radius: 5px;
+
+          img {
+            height: 150px;
+            min-width: 150px;
+            max-width: none;
+          }
         }
 
         .reservation-list-info {
@@ -518,7 +524,7 @@ $lightgray: #f0f0f0;
 .restaurant-list {
   flex: 1;
   margin-top: 10px;
-  height: 500px;
+  height: 600px;
   border-radius: 5px;
   overflow-y: scroll;
   padding-right: 15px;
@@ -543,6 +549,12 @@ $lightgray: #f0f0f0;
       height: 50px;
       overflow: hidden;
       border-radius: 5px;
+
+      img {
+        height: 50px;
+        min-width: 50px;
+        max-width: none;
+      }
     }
 
     .restaurant-info {
@@ -753,15 +765,16 @@ $lightgray: #f0f0f0;
     }
 
     .restaurant-reservation-info {
+      display: flex;
+      flex-direction: column;
 
       .restaurant-detail-rating {
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 10px;
+        display: inline-block;
+        margin-left: 25px;
       }
 
       .restaurant-detail-info {
-        margin: 15px;
+        margin-left: 15px;
 
         li {
           margin: 10px;
@@ -777,7 +790,7 @@ $lightgray: #f0f0f0;
 
       .available-reservations {
         display: flex;
-        margin: 10px;
+        margin: 15px;
 
         button {
           width: 50px;
@@ -805,7 +818,7 @@ $lightgray: #f0f0f0;
       margin: 20px;
 
       .restaurant-reviews-list {
-        height: 200px;
+        height: 290px;
         overflow-y: scroll;
         padding-right: 15px;
 
@@ -813,7 +826,7 @@ $lightgray: #f0f0f0;
           padding: 10px;
           border: 1px solid gray;
           border-radius: 5px;
-          width: 300px;
+          width: 500px;
         }
       }
 
@@ -825,6 +838,7 @@ $lightgray: #f0f0f0;
     .reservation-btn {
       height: 50px;
       border-radius: 5px;
+      margin-top: 25px;
     }
 
     .gray-reservation-btn {

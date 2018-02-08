@@ -406,19 +406,146 @@ reservation5 = Reservation.create(
   completed: false,
   num_people: 4
 )
+reservation6 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 1,
+  date: "02/04/2018",
+  time: "6:00",
+  completed: true,
+  num_people: 2
+)
+reservation7 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 2,
+  date: "02/07/2018",
+  time: "8:00",
+  completed: true,
+  num_people: 2
+)
+reservation8 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 6,
+  date: "02/18/2018",
+  time: "9:00",
+  completed: false,
+  num_people: 3
+)
+reservation9 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 11,
+  date: "02/18/2018",
+  time: "9:00",
+  completed: false,
+  num_people: 5
+)
+reservation10 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 9,
+  date: "02/16/2018",
+  time: "10:00",
+  completed: false,
+  num_people: 4
+)
+reservation11 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 3,
+  date: "01/21/2018",
+  time: "7:00",
+  completed: true,
+  num_people: 3
+)
+reservation12 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 5,
+  date: "01/24/2018",
+  time: "7:00",
+  completed: true,
+  num_people: 3
+)
+reservation13 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 7,
+  date: "01/27/2018",
+  time: "7:00",
+  completed: true,
+  num_people: 3
+)
+reservation14 = Reservation.create(
+  user_id: 2,
+  restaurant_id: 9,
+  date: "01/28/2018",
+  time: "7:00",
+  completed: true,
+  num_people: 3
+)
+reservation15 = Reservation.create(
+  user_id: 4,
+  restaurant_id: 3,
+  date: "01/15/2018",
+  time: "7:00",
+  completed: true,
+  num_people: 2
+)
+reservation16 = Reservation.create(
+  user_id: 4,
+  restaurant_id: 5,
+  date: "01/16/2018",
+  time: "7:00",
+  completed: true,
+  num_people: 2
+)
+reservation17 = Reservation.create(
+  user_id: 4,
+  restaurant_id: 1,
+  date: "01/18/2018",
+  time: "8:00",
+  completed: true,
+  num_people: 4
+)
+reservation18 = Reservation.create(
+  user_id: 5,
+  restaurant_id: 1,
+  date: "01/19/2018",
+  time: "6:00",
+  completed: true,
+  num_people: 5
+)
 
 
 
 review1 = Review.create(
   reservation_id: 1,
   rating: 4,
-  title: 'A nice place.',
+  title: 'A nice place',
   body: 'My wife and I had a nice meal here.'
 )
-
 review2 = Review.create(
-  reservation_id: 1,
+  reservation_id: 2,
   rating: 2,
-  title: 'A bad place.',
+  title: 'A bad place',
   body: 'My wife and I had a bad meal here.'
+)
+review3 = Review.create(
+  reservation_id: 6,
+  rating: 3,
+  title: 'A decent meal',
+  body: 'I had a decent meal.'
+)
+review4 = Review.create(
+  reservation_id: 7,
+  rating: 3,
+  title: 'An ok meal',
+  body: 'I had an ok meal.'
+)
+review5 = Review.create(
+  reservation_id: 17,
+  rating: 5,
+  title: 'Sandar is great!',
+  body: 'Great tacos and sports on tv!'
+)
+review6 = Review.create(
+  reservation_id: 18,
+  rating: 2,
+  title: 'Poor service',
+  body: 'Our waiter was very rude'
 )
