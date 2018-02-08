@@ -650,7 +650,13 @@ $lightgray: #f0f0f0;
         color: #666;
         margin-left: 10px;
         font-size: 15px;
-        background: white;
+        background-image: url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png");
+        background-size: 10px 10px, 10px 10px, 2.5em 2.5em;
+        background-repeat: no-repeat;
+        background-position:
+         calc(100% - 10px) calc(1em + 2px),
+         calc(100% - 15px) calc(1em + 2px),
+         100% 0;
       }
 
       .city-input {
@@ -731,6 +737,12 @@ $lightgray: #f0f0f0;
       background: white;
     }
   }
+}
+.star-rating-cover {
+  z-index: 5;
+  height: 100px;
+  width: 500px;
+  position: absolute;
 }
 
 .reservation-btn {

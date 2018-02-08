@@ -97,13 +97,13 @@ class RestaurantDetail extends React.Component {
               </li>
               <li>{showRestaurant.cuisine}</li>
             </ul>
-            <section className="restaurant-detail-rating">
-              <StarRating
-                value={showRestaurant.rating}
-                disabled={true}
-                editing={false} />
-              <p>{`from ${showRestaurant.num_reviews} reviews`}</p>
+            <section className="star-rating-cover">
             </section>
+              <section className="restaurant-detail-rating">
+                <StarRating
+                  value={showRestaurant.rating} />
+                <p>{`from ${showRestaurant.num_reviews} reviews`}</p>
+              </section>
             <ul className="available-reservations">
               {
                 reservationTimes.map(reservationTime => (
@@ -146,11 +146,11 @@ class RestaurantDetail extends React.Component {
                 showRestaurant.reviews.map(review => {
                   return (
                     <li className="restaurant-review-item">
+                      <section className="star-rating-cover">
+                      </section>
                       <p>{review.title}</p>
                       <StarRating
-                        value={review.rating}
-                        disabled={true}
-                        editing={false} />
+                        value={review.rating} />
                       <p>{review.body}</p>
                     </li>
                   );

@@ -88,7 +88,6 @@ class SearchForm extends React.Component {
                 <option value="7">7 people</option>
                 <option value="8">8 people</option>
               </select>
-              <img src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png"/>
             </section>
             <section className="date-input search-btn">
               <input
@@ -115,7 +114,6 @@ class SearchForm extends React.Component {
                 <option value="8">8:00</option>
                 <option value="9">9:00</option>
               </select>
-              <img src="https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png"/>
             </section>
             <section className="city-input search-btn">
                 <select
