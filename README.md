@@ -37,7 +37,7 @@ Future reservations on profile:
 
 
 Updating reservation:
-![update-reservation-modal](https://user-images.githubusercontent.com/32603834/36046173-e693a7f0-0d8c-11e8-9f76-b2f8d133d2dd.jpg)
+![update-reservation-modal](https://user-images.githubusercontent.com/32603834/36055025-6ecd49fc-0dae-11e8-89f1-4016d6901d0c.jpg)
 
 
 ### Reviews
