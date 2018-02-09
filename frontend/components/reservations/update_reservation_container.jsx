@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import UpdateReservation2 from './update_reservation2';
+import UpdateReservation from './update_reservation';
 import {
   requestUpdateReservation,
 } from '../../actions/reservation_actions';
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect (
   mapStateToProps,
   mapDispatchToProps
-)(UpdateReservation2));
+)(UpdateReservation));
