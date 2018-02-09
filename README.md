@@ -1,4 +1,4 @@
 # EatTime
 
-[(https://eattime.herokuapp.com)]
+[EatTime Live](https://eattime.herokuapp.com)
 
