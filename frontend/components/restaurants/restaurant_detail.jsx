@@ -142,6 +142,8 @@ class RestaurantDetail extends React.Component {
           </section>
         </section>
         <section className="restaurant-reviews">
+          <section className="star-rating-cover2">
+          </section>
           <ul className="restaurant-reviews-list">
             {
               showRestaurant.reviews
@@ -151,9 +153,8 @@ class RestaurantDetail extends React.Component {
                   <li
                     className="restaurant-review-item"
                     key={review.id}>
-                    <section className="star-rating-cover">
-                    </section>
                     <p>{review.title}</p>
+                    <p>{`by ${review.username}`}</p>
                     <StarRating
                       value={review.rating} />
                     <p>{review.body}</p>

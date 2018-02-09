@@ -5,15 +5,15 @@ class Footer extends React.Component {
   render() {
     return (
       <section className="footer">
-        <p>
-          About Us
-        </p>
-        <p>
+        <a href="https://github.com/dmccapes4/eat_time">
+          About EatTime
+        </a>
+        <a href="https://www.linkedin.com/in/dylan-mccapes">
           Contact
-        </p>
-        <p>
+        </a>
+        <a href="https://www.linkedin.com/in/dylan-mccapes">
           LinkedIn
-        </p>
+        </a>
       </section>
     );
   }
