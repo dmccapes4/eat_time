@@ -21,13 +21,12 @@
     "react-star-rating": "^1.4.2",
     "react-star-ratings": "^2.2.0",
     "redux": "^3.7.2",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "star-rating-react": "0.0.1",
     "webpack": "^3.5.6"
   },
   "devDependencies": {
+    "redux-logger": "^3.0.6",
     "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
@@ -37,5 +36,7 @@
   "engines": {
     "npm": "3.10.10",
     "node": "v6.10.1"
-  }
+  },
+  "author": "Dylan McCapes",
+  "license": "ISC"
 }
