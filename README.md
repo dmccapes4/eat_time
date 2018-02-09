@@ -50,3 +50,9 @@ Updating a review:
 ![review-modal](https://user-images.githubusercontent.com/32603834/36046404-a5314d2a-0d8d-11e8-9dfc-26e16c40257a.jpg)
 
 
+
+### Future additions
+
+* Mark restaurants as favorites
+* Map showing restaurant location
+* Select ringtone to alert when table is ready
