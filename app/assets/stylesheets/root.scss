@@ -278,7 +278,7 @@ $lightgray: #f0f0f0;
   font-size: 20;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .update-btn {
@@ -370,6 +370,12 @@ $lightgray: #f0f0f0;
   border: 1px solid gray;
   background: white;
 
+  h2 {
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
   .input-fields {
     width: 450px;
   }
@@ -441,6 +447,7 @@ $lightgray: #f0f0f0;
       display: flex;
       justify-content: space-between;
       margin: 20px;
+      width: 800px;
 
       .reservation-list-content-left {
         display: flex;
@@ -650,6 +657,7 @@ $lightgray: #f0f0f0;
         color: #666;
         margin-left: 10px;
         font-size: 15px;
+        background: white;
         background-image: url("https://res.cloudinary.com/mccapes-construction/image/upload/v1517526811/down-arrow_deu6jl.png");
         background-size: 10px 10px, 10px 10px, 2.5em 2.5em;
         background-repeat: no-repeat;
@@ -867,9 +875,18 @@ $lightgray: #f0f0f0;
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50px;
   margin-top: 10px;
   background: #333;
   color: white;
+
+  a {
+    font-size: 12px;
+    margin: 20px;
+    color: white;
+  }
 }

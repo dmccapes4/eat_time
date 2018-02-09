@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import UpdateReservationContainer from './update_reservation_container';
 import ReviewContainer from '../reviews/review_container';
+import style from '../modal_style';
 
 
 class ReservationListItem extends React.Component {
@@ -103,7 +104,8 @@ class ReservationListItem extends React.Component {
               isOpen={this.state.openUpdate}
               onRequestClose={this.closeUpdateModal}
               ariaHideApp={false}
-              className={{base: "update-modal"}}>
+              className={{base: "update-modal"}}
+              style={style}>
               <UpdateReservationContainer
                 closeUpdateModal={this.closeUpdateModal}
                 reservation={reservation} />
@@ -112,7 +114,8 @@ class ReservationListItem extends React.Component {
               isOpen={this.state.openReview}
               onRequestClose={this.closeReviewModal}
               ariaHideApp={false}
-              className={{base: "review-modal"}}>
+              className={{base: "review-modal"}}
+              style={style}>
               <ReviewContainer
                 closeReviewModal={this.closeReviewModal}
                 reservation={reservation}

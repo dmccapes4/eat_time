@@ -5,6 +5,7 @@ import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
 import _ from 'lodash';
 import Root from '../root';
+import style from '../modal_style';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -117,13 +118,15 @@ class NavBar extends React.Component {
           isOpen={this.state.openLogin}
           onRequestClose={this.closeLoginModal}
           ariaHideApp={false}
-          className={{base: "modal"}}>
+          className={{base: "modal"}}
+          style={style}>
           <LoginContainer closeLoginModal={this.closeLoginModal} />
         </Modal>
         <Modal isOpen={this.state.openSignup}
           onRequestClose={this.closeSignupModal}
           ariaHideApp={false}
-          className={{base: "modal"}}>
+          className={{base: "modal"}}
+          style={style}>
           <SignupContainer closeSignupModal={this.closeSignupModal} />
         </Modal>
       </section>

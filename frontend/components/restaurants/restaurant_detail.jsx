@@ -143,9 +143,13 @@ class RestaurantDetail extends React.Component {
           <section className="restaurant-reviews">
             <ul className="restaurant-reviews-list">
               {
+                showRestaurant.reviews
+                ?
                 showRestaurant.reviews.map(review => {
                   return (
-                    <li className="restaurant-review-item">
+                    <li
+                      className="restaurant-review-item"
+                      key={review.id}>
                       <section className="star-rating-cover">
                       </section>
                       <p>{review.title}</p>
@@ -155,6 +159,8 @@ class RestaurantDetail extends React.Component {
                     </li>
                   );
                 })
+                :
+                null
               }
             </ul>
           </section>

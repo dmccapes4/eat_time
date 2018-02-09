@@ -113,10 +113,12 @@ class Splash extends React.Component {
             closeLoginModal={this.closeLoginModal}
             />
         </Modal>
-        <Modal isOpen={this.state.openSignup}
+        <Modal
+          isOpen={this.state.openSignup}
           onRequestClose={this.closeSignupModal}
           ariaHideApp={false}
-          className={{base: "modal" }}>
+          className={{base: "modal" }}
+          style={style}>
           <SignupContainer
             closeSignupModal={this.closeSignupModal}
             />
