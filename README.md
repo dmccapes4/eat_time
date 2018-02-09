@@ -40,3 +40,13 @@ Updating reservation:
 ![update-reservation-modal](https://user-images.githubusercontent.com/32603834/36046173-e693a7f0-0d8c-11e8-9f76-b2f8d133d2dd.jpg)
 
 
+### Reviews
+
+After a reservation has been completed users can view them on their past reservations page. On this page they are able to review their past reservations. They can also edit their reviews by clicking on the link with the review title. They can also delete their reviews.
+
+
+
+Updating a review:
+![review-modal](https://user-images.githubusercontent.com/32603834/36046404-a5314d2a-0d8d-11e8-9dfc-26e16c40257a.jpg)
+
+
