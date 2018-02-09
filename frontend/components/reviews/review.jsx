@@ -10,7 +10,7 @@ class Review extends React.Component {
       title: "",
       body: "",
     };
-    if (this.props.reservation.review) {
+    if (this.props.review) {
       this.state = this.props.review;
     }
 
