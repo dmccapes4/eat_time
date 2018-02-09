@@ -14,4 +14,4 @@ EatTime is a full-stack web application that allows users to make and manage res
 
 EatTime allows users to search for restaurants by city, cuisine, or restaurant name. The user also specifies the date, time and number of people for the reservation. This search fetches a list of restaurants matching the parameters.
 
-![search-filled-and-results](https://user-images.githubusercontent.com/32603834/36045488-b5eb3e26-0d8a-11e8-9d0a-1857ffa410b2.jpg)
+![search-filled-and-results 1](https://user-images.githubusercontent.com/32603834/36045628-296acb00-0d8b-11e8-83f6-08bbb55b5917.jpg)
