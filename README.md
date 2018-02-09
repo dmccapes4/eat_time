@@ -33,3 +33,10 @@ When users have narrowed their search they can make their reservation. After the
 
 Future reservations on profile:
 ![future-reservations](https://user-images.githubusercontent.com/32603834/36046084-a9eb36e2-0d8c-11e8-9db3-8dc278b83a5a.jpg)
+
+
+
+Updating reservation:
+![update-reservation-modal](https://user-images.githubusercontent.com/32603834/36046173-e693a7f0-0d8c-11e8-9f76-b2f8d133d2dd.jpg)
+
+
