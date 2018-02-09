@@ -11,7 +11,7 @@ class Review extends React.Component {
       body: "",
     };
     if (this.props.review) {
-      this.state = this.props.review;
+      this.reviewId = this.props.review.id;
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,6 +47,10 @@ class Review extends React.Component {
   }
 
   render() {
+    if (this.state.reviewId) {
+      this.props.requestReview(this.state.reviewId);
+    }
+
     return(
       <section className="review-session">
         <form>

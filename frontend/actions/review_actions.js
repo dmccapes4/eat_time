@@ -29,7 +29,7 @@ const receiveDeleteReview = reviewId => ({
   reviewId,
 });
 
-export const requestReservation = id => dispatch => (
+export const requestReview = id => dispatch => (
   fetchReview(id)
     .then((review) => dispatch(receiveReview(review)))
 );

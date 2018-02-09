@@ -6,6 +6,7 @@ import {
   requestCreateReview,
   requestDeleteReview,
   requestUpdateReview,
+  requestReview,
 } from '../../actions/review_actions';
 import { requestClearErrors } from '../../actions/session_actions';
 
@@ -19,6 +20,7 @@ const mapDispatchToProps = dispatch => ({
   requestCreateReview: review => dispatch(requestCreateReview(review)),
   requestDeleteReview: id => dispatch(requestDeleteReview(id)),
   requestUpdateReview: review => dispatch(requestUpdateReview(review)),
+  requestReview: id => dispatch(requestReview(id)),
 });
 
 export default withRouter(connect (
