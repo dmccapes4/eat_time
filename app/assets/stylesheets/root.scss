@@ -7,6 +7,10 @@ $lightgray: #f0f0f0;
   height: 100vh;
 }
 
+.body {
+  height: 100vh;
+}
+
 .splash {
   display: flex;
   flex-direction: column;
@@ -528,7 +532,7 @@ $lightgray: #f0f0f0;
   display: flex;
   margin: 30px;
   padding-bottom: 50px;
-  height: 100vh;
+  height: 70vh;
 }
 
 .restaurant-list {
