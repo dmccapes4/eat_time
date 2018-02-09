@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
 import UpdateReservationContainer from './update_reservation_container';
 import ReviewContainer from '../reviews/review_container';
+import ReactDOM from 'react-dom';
 import style from '../modal_style';
 
 

@@ -12,8 +12,8 @@ export default (state = {}, action) => {
     case RECEIVE_RESERVATION:
       return Object.assign(
         {},
-        { [action.reservation.id]: action.reservation },
-        state
+        state,
+        { [action.reservation.id]: action.reservation }
       );
     case RECEIVE_RESERVATIONS:
       action.reservations.forEach((reservation) => {

@@ -12,8 +12,8 @@ export default (state = {}, action) => {
     case RECEIVE_REVIEW:
       return Object.assign(
         {},
-        { [action.review.id]: action.review },
-        state
+        state,
+        { [action.review.id]: action.review }
       );
     case RECEIVE_REVIEWS:
       action.reviews.forEach((review) => {

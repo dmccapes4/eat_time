@@ -84,7 +84,8 @@ class UpdateReservation extends React.Component {
               <section className="time-input search-btn">
                 <select
                   id="update-num-people"
-                  onChange={this.handleInput}>
+                  onChange={this.handleInput}
+                  value={this.props.reservation.num_people}>
                   <option value="2">2 people</option>
                   <option value="3">3 people</option>
                   <option value="4">4 people</option>
