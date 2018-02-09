@@ -5,15 +5,15 @@ class Footer extends React.Component {
   render() {
     return (
       <section className="footer">
-        <Link >
+        <p>
           About Us
-        </Link>
-        <Link >
+        </p>
+        <p>
           Contact
-        </Link>
-        <Link >
+        </p>
+        <p>
           LinkedIn
-        </Link>
+        </p>
       </section>
     );
   }

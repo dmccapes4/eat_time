@@ -884,9 +884,13 @@ $lightgray: #f0f0f0;
   background: #333;
   color: white;
 
-  a {
+  p {
     font-size: 12px;
     margin: 20px;
     color: white;
+  }
+
+  p:hover {
+    cursor: pointer;
   }
 }
