@@ -1,24 +1,7 @@
-# README
+# EatTime
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[EatTime Live](https://eattime.herokuapp.com)
 
-Things you may want to cover:
+EatTime is a full-stack web application that allows users to make and manage reservations at restaurants. EatTime's backend is managed using Ruby on Rails with a PostgreSQL database and uses React/Redux on the frontend.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![ScreenShot](https://res.cloudinary.com/mccapes-construction/image/upload/v1518202108/splash-page_afieme.tiff)
