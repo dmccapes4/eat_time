@@ -140,30 +140,30 @@ class RestaurantDetail extends React.Component {
               Make Your Reservation!
             </button>
           </section>
-          <section className="restaurant-reviews">
-            <ul className="restaurant-reviews-list">
-              {
-                showRestaurant.reviews
-                ?
-                showRestaurant.reviews.map(review => {
-                  return (
-                    <li
-                      className="restaurant-review-item"
-                      key={review.id}>
-                      <section className="star-rating-cover">
-                      </section>
-                      <p>{review.title}</p>
-                      <StarRating
-                        value={review.rating} />
-                      <p>{review.body}</p>
-                    </li>
-                  );
-                })
-                :
-                null
-              }
-            </ul>
-          </section>
+        </section>
+        <section className="restaurant-reviews">
+          <ul className="restaurant-reviews-list">
+            {
+              showRestaurant.reviews
+              ?
+              showRestaurant.reviews.map(review => {
+                return (
+                  <li
+                    className="restaurant-review-item"
+                    key={review.id}>
+                    <section className="star-rating-cover">
+                    </section>
+                    <p>{review.title}</p>
+                    <StarRating
+                      value={review.rating} />
+                    <p>{review.body}</p>
+                  </li>
+                );
+              })
+              :
+              null
+            }
+          </ul>
         </section>
       </section>
     );

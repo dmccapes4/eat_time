@@ -448,6 +448,7 @@ $lightgray: #f0f0f0;
       justify-content: space-between;
       margin: 20px;
       width: 800px;
+      border-bottom: 1px solid gray;
 
       .reservation-list-content-left {
         display: flex;
@@ -508,6 +509,7 @@ $lightgray: #f0f0f0;
         border: none;
         border-radius: 5px;
         margin: 20px;
+        margin-bottom: 25px;
       }
 
       .reservation-list-btn:hover {
@@ -526,12 +528,13 @@ $lightgray: #f0f0f0;
 .restaurant-container {
   display: flex;
   margin: 30px;
+  padding-bottom: 50px;
 }
 
 .restaurant-list {
   flex: 1;
   margin-top: 10px;
-  height: 600px;
+  height: 650px;
   border-radius: 5px;
   overflow-y: scroll;
   padding-right: 15px;
@@ -542,8 +545,7 @@ $lightgray: #f0f0f0;
     align-items: center;
     margin: 10px;
     height: 50px;
-    border: 1px solid gray;
-    border-radius: 5px;
+    border-bottom: 1px solid gray;
     overflow: hidden;
     opacity: 0.8;
 
@@ -830,30 +832,8 @@ $lightgray: #f0f0f0;
     align-items: center;
     padding: 40px;
     height: 100px;
+    border-bottom: 1px solid gray;
 
-    .restaurant-reviews {
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      margin: 20px;
-
-      .restaurant-reviews-list {
-        height: 290px;
-        overflow-y: scroll;
-        padding-right: 15px;
-
-        .restaurant-review-item {
-          padding: 10px;
-          border: 1px solid gray;
-          border-radius: 5px;
-          width: 500px;
-        }
-      }
-
-      p {
-        margin: 10px;
-      }
-    }
 
     .reservation-btn {
       height: 50px;
@@ -870,6 +850,30 @@ $lightgray: #f0f0f0;
       font-size: 15px;
       height: 50px;
       border-radius: 5px;
+    }
+  }
+
+  .restaurant-reviews {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 20px;
+    padding-top: 30px;
+
+    .restaurant-reviews-list {
+      height: 290px;
+      overflow-y: scroll;
+      padding-right: 15px;
+
+      .restaurant-review-item {
+        padding: 10px;
+        border-bottom: 1px solid gray;
+        width: 500px;
+      }
+    }
+
+    p {
+      margin: 10px;
     }
   }
 }

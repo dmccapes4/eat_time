@@ -348,7 +348,7 @@ restaurant29 = Restaurant.create(
 )
 
 restaurant30 = Restaurant.create(
-  name: 'Danial',
+  name: 'Daniel',
   address: '60 East 65th Street',
   state: 'New York',
   city: 'New York',
@@ -358,9 +358,115 @@ restaurant30 = Restaurant.create(
   image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518106763/daniel_lyggqq.jpg"
 )
 
+restaurant31 = Restaurant.create(
+  name: 'Juniper & Ivy',
+  address: '2228 Kettner Blvd',
+  state: 'California',
+  city: 'San Diego',
+  cuisine: 'French',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518148088/juniper-and-ivy_ymaqvh.jpg"
+)
 
+restaurant32 = Restaurant.create(
+  name: 'CUCINA Urbana',
+  address: '505 Laurel Street',
+  state: 'California',
+  city: 'San Diego',
+  cuisine: 'Italian',
+  max_capacity: 3,
+  time: 1,
+  image_url: "http://res.cloudinary.com/mccapes-construction/image/upload/v1518148512/cucina-urbana_dacpxh.jpg"
+)
 
+restaurant33 = Restaurant.create(
+  name: 'Nobu San Diego',
+  address: '207 Fifth Avenue',
+  state: 'California',
+  city: 'San Diego',
+  cuisine: 'Japanese',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518148703/nobu-san-diego_rubbok.jpg"
+)
 
+restaurant34 = Restaurant.create(
+  name: 'Urban Solace',
+  address: '3823 30th Street',
+  state: 'California',
+  city: 'San Diego',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518148832/urban-solace_mopyjv.jpg"
+)
+
+restaurant35 = Restaurant.create(
+  name: 'Puesto',
+  address: '789 West Harbor Drive',
+  state: 'California',
+  city: 'San Diego',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518148985/puesto_dece6a.jpg"
+)
+
+restaurant36 = Restaurant.create(
+  name: 'Tres Hermanas',
+  address: '805 2nd Street',
+  state: 'California',
+  city: 'Davis',
+  cuisine: 'Mexican',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518149991/tres-hermanas_igsolb.jpg"
+)
+
+restaurant37 = Restaurant.create(
+  name: 'Paesanos',
+  address: '139 G Street',
+  state: 'California',
+  city: 'Davis',
+  cuisine: 'Italian',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518150110/paesanos_sb2t7u.jpg"
+)
+
+restaurant38 = Restaurant.create(
+  name: 'Mustard Seed',
+  address: '222 D Street #11',
+  state: 'California',
+  city: 'Davis',
+  cuisine: 'Californian',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518150243/mustard-seed_p7vrx6.jpg"
+)
+
+restaurant39 = Restaurant.create(
+  name: 'Seasons',
+  address: '102 F Street',
+  state: 'California',
+  city: 'Davis',
+  cuisine: 'American',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518150456/seasons_ull111.jpg"
+)
+
+restaurant40 = Restaurant.create(
+  name: 'Mikuni',
+  address: '500 1st Street #11',
+  state: 'California',
+  city: 'Davis',
+  cuisine: 'Japanese',
+  max_capacity: 3,
+  time: 1,
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518150569/mikuni_jg5dzz.jpg"
+)
 
 
 

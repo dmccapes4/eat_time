@@ -124,6 +124,9 @@ class SearchForm extends React.Component {
                   <option value="Sacramento">Sacramento</option>
                   <option value="San Francisco">San Francisco</option>
                   <option value="Santa Barbara">Santa Barbara</option>
+                  <option value="San Diego">San Diego</option>
+                  <option value="New York">New York</option>
+                  <option value="Davis">Davis</option>
                 </select>
             </section>
             <button
@@ -145,6 +148,9 @@ class SearchForm extends React.Component {
                 <option value="Italian">Italian</option>
                 <option value="Seafood">Seafood</option>
                 <option value="Japanese">Japanese</option>
+                <option value="French">French</option>
+                <option value="American">American</option>
+                <option value="Californian">Californian</option>
               </select>
             </section>
             <section className="restaurant-search search-btn">
