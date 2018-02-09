@@ -179,7 +179,7 @@ restaurant16 = Restaurant.create(
   cuisine: 'Mexican',
   max_capacity: 3,
   time: 1,
-  image_url: "http://res.cloudinary.com/mccapes-construction/image/upload/v1518063728/tropisueno_ottbip.jpg"
+  image_url: "https://res.cloudinary.com/mccapes-construction/image/upload/v1518063728/tropisueno_ottbip.jpg"
 )
 
 restaurant17 = Restaurant.create(
