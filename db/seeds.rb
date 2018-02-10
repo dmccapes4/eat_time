@@ -8,6 +8,8 @@
 
 User.destroy_all
 Restaurant.destroy_all
+Review.destroy_all
+Reservation.destroy_all
 
 demo = User.create(username: 'Demo', email: '_', password: '______')
 user1 = User.create(username: 'Dylan', email: 'dylan@email.com', password: '111111')
